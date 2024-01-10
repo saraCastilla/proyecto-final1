@@ -1,0 +1,722 @@
+
+@font-face{
+    font-family: blair;
+    src: url(../fonts/Blair\ ITC\ Medium.otf)
+  }
+  
+  @font-face{
+    font-family: flama;
+    src: url(../fonts/FlamaCondensed-Bold.ttf)
+  }
+  @font-face{
+    font-family: monserrat;
+    src: url(../fonts/Montserrat-Bold.ttf)
+  }
+  @font-face {
+    font-family: montsfina;
+    src: url(../fonts/Montserrat-Light.ttf);
+  }
+  
+  
+  /* Aquí definimos las Custom properties */
+  :root {
+      /* colores principales */
+      --naraja: rgb(246,140,104);
+      --rosa: rgb(229,90,123);
+      --verde: rgb(158,196,118);
+      --azul: rgb(0,101,128);
+      /* colores segundarios */
+      --berengena: rgba(154,52,79,0.8);
+      --turquesa: rgba(92,188,198,0.8);
+      --gris: rgba(166,155,149,0.8);
+      /* Tipografía */
+      --tipo-principal: monserrat;
+      --tipo-secundaria: 'Gloock', serif;
+      --tipo-tercera: 'poppins', serif;
+      
+    }
+    
+    /* Reseteamos los margin y paddings de todas las etiquetas */
+    * {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      vertical-align: baseline;
+    }
+    
+    /* Evitamos problemas con las imagenes */
+    img, picture, video, iframe, figure {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      /* opcional */
+      -o-object-fit: cover;
+         object-fit: cover;
+      /* opcional */
+      -o-object-position: center center;
+         object-position: center center;
+    }
+    
+    /* Reseteamos los enlaces para funcionar como cajas... */
+    a {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      font-size: inherit;
+    }
+    
+    /* ... excepto los que se encuentran en párrafos */
+    p a {
+      display: inline;
+    }
+    
+    /* Quitamos los puntos de los <li> */
+    li {
+      list-style-type: none;
+    }
+    
+    /* Configuramos anclas suaves */
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+    h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+      font-size: 1em;
+      font-weight: inherit;
+      font-style: inherit;
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Evitamos problemas con los pseudoelementos de quotes */
+    blockquote:before, blockquote:after, q:before, q:after {
+      content: "";
+      content: none;
+    }
+    
+    /* Configuramos el texto que seleccionamos */
+    ::-moz-selection {
+      background-color: var(--negro);
+      color: var(--blanco);
+    }
+    ::selection {
+      background-color: var(--negro);
+      color: var(--blanco);
+    }
+    
+    /* Nivelamos problemas de tipografías y colocación de formularios */
+    form, input, textarea, select, button, label {
+      font-family: inherit;
+      font-size: inherit;
+      -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto;
+      background-color: transparent;
+      color: inherit;
+      display: block;
+      /* opcional */
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none;
+    }
+    
+    /* Reseteamos las tablas */
+    table, tr, td {
+      border-collapse: collapse;
+      border-spacing: 0;
+    }
+    
+    /* Evitamos problemas con los SVG */
+    svg {
+      width: 100%;
+      display: block;
+      fill: currentColor;
+    }
+    
+    
+    /* Configuramos la tipografía para toda la web */
+    .body {
+      min-height: 100vh;
+      font-size: 100%;
+     
+      /* opcional */
+      /* line-height: 1.4em; */
+      /* opcional */
+      -webkit-hyphens: auto;
+          -ms-hyphens: auto;
+              hyphens: auto;
+      /* opcional */
+      font-smooth: always;
+      /* opcional */
+      -webkit-font-smoothing: antialiased;
+      /* opcional */
+      -moz-osx-font-smoothing: grayscale;
+      background-image: url(../img/eventos.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+
+
+
+
+    .header{
+        width: 100vw;
+        height: 12vh;
+        padding-top: 1vh;
+        display: flex;
+        justify-content:space-between;
+        
+        align-items: center;
+       
+       
+      }
+      .header__figure{
+        width: 20vw;
+        margin-left: 5vw;
+      }
+      .header__nav{
+        width: 45vw;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0;
+        
+        
+      }
+      .nav__ul{
+        width: 50vw;
+        padding-right: 5vw;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+      
+        flex-wrap: wrap;
+       
+      }
+      
+      
+      .nav__li:hover{
+        color: var(--naraja);
+        
+      }
+      .nav__li .active{
+        color: var(--naraja);
+      }
+      .nav__li{ 
+        margin: 0.5em;
+        text-align: center; 
+        font-size: 2.3em; 
+        font-family:flama;
+        font-weight: 700;
+        color: var(--azul);
+        
+      }
+      /* ---------menu hamburguesa--------- */
+      .hamburger{
+        display: none;
+        position:fixed;
+        background-color:transparent;
+        left:0;
+        top:0;
+        height:30px;
+        width:30px;
+        padding:20px 20px;
+        -webkit-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+        -webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        z-index:1002;
+        cursor:pointer;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none
+      }
+      .hamburger.is-active{
+        background-color:none;
+      }
+      ._layer{
+        background:var(--azul);
+        margin-bottom:4px;
+        border-radius:2px;
+        width:28px;
+        height:4px;
+        opacity:1;
+        -webkit-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+        -webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+        transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      }
+      .hamburger:hover .-top{
+        -webkit-transform:translateY(-100%);
+        -ms-transform:translateY(-100%);
+        transform:translateY(-100%);
+      }
+      .hamburger:hover .-bottom{
+        -webkit-transform:translateY(50%);
+        -ms-transform:translateY(100%);
+        transform:translateY(100%);
+        }
+      .hamburger.is-active .-top{
+        -webkit-transform:translateY(200%) rotate(45deg) ;
+        -ms-transform:translateY(200%) rotate(45deg) ;
+        transform:translateY(200%) rotate(45deg) ;
+      }
+      .hamburger.is-active .-mid{
+        opacity:0;
+      }
+      .hamburger.is-active .-bottom{
+        -webkit-transform:translateY(-200%) rotate(135deg) ;
+        -ms-transform:translateY(-200%) rotate(135deg) ;
+        transform:translateY(-200%) rotate(135deg) ;
+      }
+      
+      .menuppal.is_active{
+        transform: translate3d(0px, 0px, 0px);
+      }
+      .menuppal{
+         background-color:rgba(255, 255, 255, 0.733);
+          bottom: 0;
+          height: 100%;
+          left: 0;
+          overflow-y: scroll;
+          position: fixed;
+          top: 0;
+          transform: translate3d(0px, -100%, 0px);
+          transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
+          width: 100%;
+          z-index: 1001;
+      }
+      .menuppal ul{
+        margin:0;padding:0;
+      }
+      .menuppal ul li { 
+        list-style: none;
+        text-align:center;
+        font-family: Verdadna, Arial, Helvetica;
+        color:white;
+        font-size:1.5rem;
+        line-height:3em;
+        height:3em;
+        color:var(--naraja);
+        text-transform:none;
+        font-weight:bold;
+      }
+      .menuppal ul li a{
+        text-decoration:none;
+        color:var(--azul);
+      }
+      .menuppal ul li a:hover{
+        text-decoration:none;
+        color:var(--naraja);
+      }
+  .main{
+    width: 100vw;
+    height: auto;
+    padding-bottom: 10vh;
+    /* background-image: url(../img/eventos.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5vh;
+  }
+  .main__div{
+    height: 300px;
+    background-image: url(../img/menu.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+   
+  }
+  .abaut{
+    margin-top: 20vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .abaut__div{
+    margin-top: 10vh;
+    width: 90vw;
+    padding: 3%;
+    background-color:rgba(255,255,255,.7) ;
+    backdrop-filter: blur 7px;
+    border-radius: 8px;
+    border: 1px solid  white;
+    display: flex;
+    flex-direction: column;
+    gap: 5vh;
+    animation: caer1 1.5s; 
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+  
+  }
+  
+  @keyframes caer1 {
+    0%{
+      transform: translateY(-500px);
+    }
+    50%{
+      transform: translateY(-250px);
+    }
+    100%{
+      transform: translateY(-0); 
+      
+    }
+  
+  }
+  
+  .abaut__h1{
+    color: white;
+    text-align: center;
+    font-family:monserrat;
+    font-size: 3em;
+  }
+  .abaut__parrafo{
+    color: var(--azul);
+    font-family:montserrat;
+    font-size: 2em;
+    font-weight: 500;
+    line-height: 2;
+  
+  }
+  .abaut__h2{
+    text-align: left;
+    color:var(--azul);
+    font-family: 'Poppins', sans-serif;;
+    font-size: 3em;
+    line-height: 1;
+  }
+  .quehacemos{
+    margin-top: 20vh;
+    width: 100vw;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  
+  }
+  .quehacemos__h2{
+    color: white;
+    text-align: center;
+    padding-bottom: 5vh;
+    font-family:monserrat;
+    font-size: 3em;
+    padding-top: 10vh;
+  }
+  .quehacemos__div{
+   
+    display: flex;
+    padding: 2%;
+    flex-wrap: wrap;
+    
+    gap: 3rem;
+  
+  }
+  .quehacemos__primera{
+    width: 32rem;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color:  rgba(229,90,123,.7);
+    backdrop-filter: blur 7px;
+    border-radius: 8px;
+    border: 1px solid  var(--rosa);
+  }
+  .quehacemos__segunda{
+    width: 32rem;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color:  rgba(92,188,198,0.7);
+    backdrop-filter: blur 7px;
+    border-radius: 8px;
+    border: 1px solid  var(--turquesa);
+  }
+  .quehacemos__tercera{
+    width: 32rem;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color:  rgba(154,52,79,0.7);
+    backdrop-filter: blur 7px;
+    border-radius: 8px;
+    border: 1px solid  var(--berengena);
+  }
+  
+  
+  .quehacemos__h4{
+    width: 15vw;
+    text-align: letf;
+    color: white;
+    font-family: flama;
+    font-size: 3.5em;
+    line-height: 1;
+  }
+  .quehacemos__parrafo{
+    color: white;
+    font-size: 1.7em;
+  }
+  .comotrabajamos{
+  
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    
+    
+  }
+  .comotrabajamos__h2{
+    color: white;
+    text-align: center;
+    padding-top: 10vh;
+    font-family:monserrat;
+    font-size: 3em;
+    padding-bottom: 2em;
+  }
+  .comotrabajamos__div{
+    width: 100vw;
+    padding: 2%;
+    display: flex;
+    gap: 3rem;
+    overflow: hiden;
+    flex-wrap: wrap;
+  }
+  @keyframes mover {
+    0%{
+      transform: translateX(-700px);
+  
+    }
+    
+  }
+  .comotrabajamos__primera{
+    width: 52rem;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 3rem;
+    background-color:  rgb(246,140,104,0.7);
+    backdrop-filter: blur 7px;
+    border-radius: 8px;
+    border: 1px solid  var(--naraja);
+  }
+  .comotrabajamos__h3{
+    height: auto;
+    padding-top: 5%;
+    color: white;
+    font-family:var(--tipo-secundaria);
+    font-size: 5em;
+  }
+  .comotrabajamos__h4{
+    width: 15vw;
+    text-align: letf;
+    color: white;
+    font-family: flama;
+    font-size: 3.5em;
+    line-height: 1;
+  }
+  .comotrabajamos__parrafo{
+    color: white;
+    font-size: 1.7em;
+  }
+  .comotrabajamos__segunda{
+    width: 52rem;
+    padding: 3%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background-color:  rgb(0,101,128,0.4);
+    backdrop-filter: blur 7px;
+    border-radius: 8px;
+    border: 1px solid  var(--azul);
+  }
+  
+  .comotrabajamos__enlace{
+    color: white;
+    text-align: center;
+    font-family:var(--tipo-tercera);
+    font-size: 2.7em;
+    padding-top: 10vh;
+  }
+  .comotrabajamos__enlace:hover{
+    color: var(--rosa);
+  }
+  
+  
+  .footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    background-color: var(--azul);
+    height: 30vh;
+    gap: 5vh;
+  }
+  .footer__div{
+    width: 45vw;
+    margin-top: 5vw;
+    margin-left: 7vw;
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+  }
+  .footer__figure{
+    width: 17vw;
+  }
+  .footer__h2{
+    color: white;
+    font-family: blair;
+    font-size: 3.7em;
+    line-height: 0.9;
+    
+  }
+  
+  
+  .footer__social{
+    width: 35vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .social__ul{
+    width: 20vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .bi{
+    fill: white;
+  }
+  /* --------resposive---------- */
+  @media screen  and (max-width: 480px) {
+    .body{
+        background-image: url(../img/eventosMovil3.jpg);
+      background-repeat: repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+    }
+  
+    .main{
+     
+      padding-bottom: 0;
+    }
+    .main__div{
+      height: 300px;
+      background-image:url(../img/menuMovil.png) ;
+    }
+    .header__figure{
+      margin-left: 18vw;
+      margin-top: 25vh;
+      width: 15em;
+    }
+    .header__nav{
+      display: none;
+    }
+    .nav__ul{
+      display: none;
+    }
+    .hamburger{
+      display: block;
+    }
+    .abaut{
+      margin-top: 5vh;
+    }
+    .abaut__h1{
+      font-size:2em ;
+    }
+    .abaut__div{
+      display: none;
+    }
+    .quehacemos{
+      margin-top: 5vh;
+    }
+    .quehacemos__h2{
+      font-size: 1.7em;
+      padding-top: 5vh;
+    }
+    .comotrabajamos__h2{
+      font-size: 1.7em;
+      padding-top: 5vh;
+    }
+    .quehacemos__h4{
+        width: 45vw;
+     
+      font-size: 1.3em;
+      
+    }
+    .quehacemos__parrafo{
+     
+      font-size: 1.1em;
+    }
+    .comotrabajamos{
+      height: auto;
+    
+    }
+    .comotrabajamos__div{
+        padding: 5vh;
+    }
+    .comotrabajamos__h4{
+      width: 60vw;
+      font-size: 1.3em;
+      
+    }
+    .comotrabajamos__parrafo{
+      
+      font-size: 1.1em;
+    }
+    .comotrabajamos__enlace{
+      font-size: 1em;
+      padding-bottom: 5vh;
+    }
+    .comotrabajamos__primera{
+      width:32rem ;
+    }
+    .comotrabajamos__segunda{
+      width:32rem ;
+    }
+    .footer{
+        height: auto;
+        gap: 2vh;
+      }
+      .footer__div{
+        width: 60%;
+        margin-left: 5vw;
+        align-items: center;
+      }
+      .footer__figure{
+        width: 30vw;
+      }
+      .footer__h2{
+        color: white;
+        font-family: blair;
+        font-size: 1em;
+        line-height: 1.5em;
+        
+      }
+      .footer__social{
+        width: 50vw;
+        display: flex;
+        justify-content: space-around;
+      }
+      .social__ul{
+        width: 50vw;
+        display: flex;
+        justify-content: space-around;
+      }
+      .bi{
+        width: 30px;
+      }
+    }
+  }

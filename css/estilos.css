@@ -1094,17 +1094,305 @@ transition: opacity 400ms ease-in;
   fill: white;
 }
 /* ---------responsive----------- */
+@media  screen and (max-width:480px) {
+  .body{
+    background-image: url(../img/fondoMovil.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+  }
+  
+  .header__figure{
+    margin-left: 5vw;
+    margin-top: 20vh;
+    width: 15em;
+  }
+  .header__nav{
+    display: none;
+  }
+  .nav__ul{
+    display: none;
+  }
+  .hamburger{
+    display: block;
+  }
+  .landing{
+   
+    height: 80vh;
+    
+  }
+  .landing__svg{
+    width: 40vw;
+    top:30vh;
+    right: 10VW;
+  }
+  .landing__h1{
+    font-size: 2em;
+  }
+  .landing__h2{
+    font-size: 2.3em;
 
-  @media screen and (max-width: 480px) {
+  }
+  .landing__titulo{
+    width: 80vw;  
+    margin-left: 7vW;
+    margin-top: 45vh;
+  }
+  .landing__div1{
+   
+    margin-left: 7vW;
+    top: 30vh;
+   
+  }
+  @keyframes caer {
+    0%{
+      top: 0;
+    }
+    50%{
+      top:15vh ;
+    }
+    100%{
+      top: 30vh;
+    }  
+  }
+  .landing__div2{
+    
+    margin-left: 7vW;
+    top: 42vh;
+    
+  }
+  @keyframes caer2 {
+    0%{
+      top: 0;
+    }
+    50%{
+      top:17vh ;
+    }
+    100%{
+      top: 42vh;
+    }  
+  }
+  .landing__div3{
+    
+    margin-left: 7vW;
+    top: 59vh;
+    
+  }
+  @keyframes caer3 {
+    0%{
+      top: 0;
+    }
+    50%{
+      top:30vh ;
+    }
+    100%{
+      top: 59vh;
+    }  
+  }
+  /* ----------seccion info-------- */
+  .info__div{
+    width: 90%;
+    margin-left: 5vw;
+    gap: 2vh;
+  }
+  .info__h2{
+   
+    font-size: 1.7em;
+    
+  }
+  .info__h3{
+    width: 60vw;
+    margin-left: 10vw;
+    text-align: center;
+    line-height: 2;
+    font-size: 1em;
+    
+  }
+  .info__parrafo{
+    display: none;
+    font-size: 1.1em;
+  }
+  /* ------------seccion nosotros------- */
+  .nosotros{
+    background-image: url(../img/eventosMovil3.jpg);
+    
+    object-fit: cover;
+    gap: 5vh;
+  }
+  .nosotros--div{
+    gap: 2vh;
+  }
+  .nosotros__segunda{
+    gap: 1rem;
+    
+  }
+  .nosotros__primera{
+    gap: 1rem;
+    
+
+  }
+  .nosotros__tercera{
+    gap: 1rem;
+
+  }
+  .nosotros__cuarta{
+    gap: 1rem;
+
+  }
+  .nosotros__quinta{
+    gap: 1rem;
+
+  }
+  .nosotros__sexta{
+    gap: 1rem;
+
+  }
+  .nosotros__h2{
+    font-size: 1.7em;
+    padding-top: 5vh;
+  }
+  /* .nosotros__h3{
+    height: auto;
+    padding-top: 2%;
+    color: white;
+    font-family:var(--tipo-secundaria);
+    font-size: 1.5em;
+  } */
+  .nosotros__h4{
+    width: 50vw;
+    font-size: 1.3em;
+  }
+  .nosotros__parrafo{
+    
+    font-size: 1.1em;
+  }
+  .nosotros__enlace{
+    font-size: 1em;
+  }
+  /* ------seccion proyectos-------- */
+  .proyectos__naranja{
+    top: 0.7rem;
+     width: 10rem;
+    height: 2em;
+  }
+  .proyectos__turquesa{
+    top: 0;
+    right: 0;
+     width: 1rem;
+    height:10rem;
+  }
+  .proyectos__berengena{
+    top: 0.7rem;
+     width: 10rem;
+    height: 2em;
+  }
+  .proyecto__titulo{
+    
+    font-size: 1.5em;
+    
+  }
+  .card__div{
+    
+    width: 300px;
+    height:300px;
+    overflow: hidden;
+    margin: 10px;
+  } 
+  .proyectos__carab{
+    
+    width: 300px;
+    height: 300px;
+  } 
+  .carab__h3{
+    font-size: 1.7em;
+  }
+  .carab__enlace{
+    font-size: 1em;
+  }
+  .modalDialog > div{
+    width:300px ;
+    height: auto;
+  }
+  .carrusel{
+    width: 300px;
+  }
+  .grande{
+    width: 150px;
+  }
+  .img__carrusel{
+    width: 150px;
+  }
+  .puntos{
+    width: 150px;
+  } 
+  /* ---------seccion contacto---------   */
+  .contenedor{
+    margin-top: 30vh;
+  }
+  .contacto__div{
+    width: 70%;
+  }
+  .contacto__parrafo{
+    font-size: 1.7em;
+  }
+  .contacto__h3{
+    font-size: 2.5em;
+  }
+  .contacto__h2{
+    font-size: 3em;
+  }
+ .contenido-slider{
+  flex-direction: column-reverse;
+}
+
+.div{
+   width: 90%;
+}
+/* --------footer-------- */
+.footer{
+  height: 15vh;
+  gap: 2vh;
+}
+.footer__div{
+  width: 60%;
+  margin-left: 5vw;
+  align-items: center;
+}
+.footer__figure{
+  width: 30vw;
+}
+.footer__h2{
+  color: white;
+  font-family: blair;
+  font-size: 1em;
+  line-height: 1.5em;
+  
+}
+.footer__social{
+  width: 35vw;
+  display: flex;
+  justify-content: space-around;
+}
+.social__ul{
+  width: 35vw;
+  display: flex;
+  justify-content: space-around;
+}
+.bi{
+  width: 30px;
+}
+}
+
+  @media screen and (min-width:350px) and (max-width:480px) {
     .body{
       background-image: url(../img/fondoMovil.jpg);
-      background-repeat: no-repeat;
+      background-repeat:no-repeat;
       background-size: 100%;
       background-attachment: fixed;
     }
     
     .header__figure{
-      margin-left: 30vw;
+      margin-left: 18vw;
       margin-top: 25vh;
       width: 15em;
     }
@@ -1128,7 +1416,7 @@ transition: opacity 400ms ease-in;
       right: 10VW;
     }
     .landing__h1{
-      font-size: 2.7em;
+      font-size: 2.5em;
     }
     .landing__h2{
       font-size: 2.3em;
@@ -1193,6 +1481,7 @@ transition: opacity 400ms ease-in;
     .info__div{
       width: 90%;
       margin-left: 5vw;
+      gap: 1vh;
     }
     .info__h2{
      
@@ -1213,7 +1502,7 @@ transition: opacity 400ms ease-in;
     /* ------------seccion nosotros------- */
     .nosotros{
       background-image: url(../img/eventosMovil2.jpg);
-      height: 120vh;
+      height: 150vh;
       object-fit: cover;
       gap: 5vh;
     }
@@ -1268,6 +1557,9 @@ transition: opacity 400ms ease-in;
       font-size: 1em;
     }
     /* ------seccion proyectos-------- */
+    .proyectos{
+      height: 150vh;
+    }
     .proyectos__naranja{
       top: 0.7rem;
        width: 10rem;
@@ -1325,7 +1617,7 @@ transition: opacity 400ms ease-in;
     } 
     /* ---------seccion contacto---------   */
     .contenedor{
-      margin-top: 30vh;
+      margin-top: 5vh;
     }
     .contacto__div{
       width: 70%;
@@ -1348,7 +1640,7 @@ transition: opacity 400ms ease-in;
   }
   /* --------footer-------- */
   .footer{
-    height: 15vh;
+    height: auto;
     gap: 2vh;
   }
   .footer__div{
@@ -1367,12 +1659,12 @@ transition: opacity 400ms ease-in;
     
   }
   .footer__social{
-    width: 35vw;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
   }
   .social__ul{
-    width: 35vw;
+    width: 50vw;
     display: flex;
     justify-content: space-around;
   }
@@ -1382,7 +1674,7 @@ transition: opacity 400ms ease-in;
 }
 
 /* --------------pg nosotros------------------------ */
-.header__nosotros{
+/* .header__nosotros{
   width: 100vw;
   height: 12vh;
   padding-top: 1vh;
@@ -1718,11 +2010,12 @@ transition: opacity 400ms ease-in;
 .bi{
   fill: white;
 }
-@media screen and (max-width: 480px) {
+/* --------resposive---------- */
+/*@media screen  and (max-width: 480px) {
 
   .main{
     background-image: url(../img/eventosMovil.jpg);
-    
+    padding-bottom: 0;
   }
   .main__div{
     height: 300px;
@@ -1771,6 +2064,9 @@ transition: opacity 400ms ease-in;
    
     font-size: 1.1em;
   }
+  .comotrabajamos{
+    height: auto;
+  }
   .comotrabajamos__h4{
     
     font-size: 1.3em;
@@ -1782,6 +2078,7 @@ transition: opacity 400ms ease-in;
   }
   .comotrabajamos__enlace{
     font-size: 1em;
+    padding-bottom: 5vh;
   }
   .comotrabajamos__primera{
     width:32rem ;
@@ -1789,16 +2086,9 @@ transition: opacity 400ms ease-in;
   .comotrabajamos__segunda{
     width:32rem ;
   }
-    
-  
-
-
-
-
-
-}
+} 
 /* ----------pagina trabajos-------------- */
-.trabajos__main{
+/* .trabajos__main{
   background-image: url(../img/fondo2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -1884,7 +2174,7 @@ transition: opacity 400ms ease-in;
   color: white;
 }
 /* -----------modal--------- */
-   .modalDialog {
+  /* .modalDialog {
 	position: fixed;
 	
 	top: 0;
@@ -1909,7 +2199,7 @@ transition: opacity 400ms ease-in;
 	position: relative;
 	 margin: 10% auto; 
 	/* padding: 5px 20px 13px 20px; */
-	border-radius: 10px;
+	/*border-radius: 10px;
 	background: #fff;
 	background: -moz-linear-gradient(#fff, #999);
 	background: -webkit-linear-gradient(#fff, #999);
@@ -1935,7 +2225,7 @@ transition: opacity 400ms ease-in;
   padding-top: .4em;
 	/* -webkit-border-radius: 12px;
 	-moz-border-radius: 12px; */
-	border-radius: 50%;
+	/*border-radius: 50%;
 	-moz-box-shadow: 1px 1px 3px #000;
 	-webkit-box-shadow: 1px 1px 3px #000;
 	box-shadow: 1px 1px 3px #000;
@@ -2024,7 +2314,7 @@ transition: opacity 400ms ease-in;
   opacity: .8;
 
 } */
-.trabajo__turquesa{
+/*.trabajo__turquesa{
   position: absolute;
   top: 0;
   right: 50px;
@@ -2210,9 +2500,9 @@ transition: opacity 400ms ease-in;
     width: 30px;
   }
 
-}
+} */
 /* ------pagina contacto------------- */
-.contacto__main{
+/* .contacto__main{
   width: 100vw;
   height: auto;
   padding-bottom: 10vh;
@@ -2330,7 +2620,7 @@ transition: opacity 400ms ease-in;
   fill: white;
 }
 /* ----------responsive-------- */
-@media screen and (max-width: 480px) {
+/*@media screen and (max-width: 480px) {
 
 
   .contacto__main{
@@ -2419,6 +2709,21 @@ transition: opacity 400ms ease-in;
 }
 
 
+
+
+ */
+@media screen and (max-width:900px){
+  .img{
+      width: 50px;
+  }
+
+  .div{
+      width: 40%;
+  }
+
+}
+
+
 @media screen and (max-width:600px){
   .contenido-slider{
      flex-direction: column-reverse;
@@ -2428,5 +2733,5 @@ transition: opacity 400ms ease-in;
       width: 80%;
   }
 
-}
+} 
   
