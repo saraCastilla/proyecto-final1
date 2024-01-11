@@ -156,10 +156,7 @@
       -webkit-font-smoothing: antialiased;
       /* opcional */
       -moz-osx-font-smoothing: grayscale;
-      background-image: url(../img/fondo2.jpg);
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-attachment: fixed;
+      
     }
     .header{
         width: 100vw;
@@ -312,12 +309,12 @@
         text-decoration:none;
         color:var(--naraja);
       }
-    /* .trabajos__main{
+     .trabajos__main{
         background-image: url(../img/fondo2.jpg);
         background-repeat: no-repeat;
         background-size: 100%;
         background-attachment: fixed;
-      } */
+      } 
       .trabajo{
         padding-top: 10vh;
        
@@ -635,7 +632,11 @@
         .hamburger{
           display: block;
         }
-        
+        .trabajos__main{
+          background-image: url(../img/fondoMovil3.jpg);
+          background-attachment: fixed;
+          background-size: contain;
+        }
         .trabajo{
           padding-top: 15vh;
         }
@@ -722,6 +723,7 @@
             
           }
           .footer__social{
+            margin-bottom: 3vh;
             width: 50vw;
             display: flex;
             justify-content: space-around;

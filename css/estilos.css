@@ -831,6 +831,7 @@ transition: opacity 400ms ease-in;
   object-fit: cover;
   
   
+  
 }
 .nosotros__h2{
   color: white;
@@ -846,6 +847,7 @@ transition: opacity 400ms ease-in;
   gap: 2rem;
   overflow: hiden;
   flex-wrap: wrap;
+  animation-fill-mode: none;
 }
 @keyframes mover {
   0%{
@@ -1357,6 +1359,7 @@ transition: opacity 400ms ease-in;
   width: 60%;
   margin-left: 5vw;
   align-items: center;
+  margin-top: 2vh;
 }
 .footer__figure{
   width: 30vw;
@@ -1659,6 +1662,7 @@ transition: opacity 400ms ease-in;
     
   }
   .footer__social{
+    margin-bottom: 3vh;
     width: 50vw;
     display: flex;
     justify-content: space-around;

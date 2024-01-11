@@ -12,7 +12,7 @@ window.addEventListener("scroll",function () {
      console.log(posicionObjt);
      let tamañoDePantalla = window.innerHeight*0.8;
      if (posicionObjt < tamañoDePantalla) {
-         animacion.style.animation = "mover 2s ease-out" 
+         animacion.style.animation = "mover 2s ease-out " 
          
          
          
@@ -201,14 +201,14 @@ punto.forEach((cadaPunto , i) => {
 
 let cards = [
     {
-        img: "../img/galeria/3.jpg",
-        h3: "SCHWEEPES"
+        img: "../img/galeria/RETAIL/RETAIL_11.jpg",
+        h3: "RETAIL"
     },{
         img: "../img/galeria/4.jpg",
-        h3: "MASTER CARD"
+        h3: "EVENTOS"
     },{
         img: "../img/galeria/5.jpg",
-        h3: "INVERSIS"
+        h3: "DIGITAL"
     }
 ]
  let div = document.getElementById("galeria")

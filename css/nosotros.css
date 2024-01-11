@@ -154,10 +154,7 @@
       -webkit-font-smoothing: antialiased;
       /* opcional */
       -moz-osx-font-smoothing: grayscale;
-      background-image: url(../img/eventos.jpg);
-      background-repeat: no-repeat;
-      background-size: 100%;
-      background-attachment: fixed;
+     
     }
 
 
@@ -318,10 +315,10 @@
     width: 100vw;
     height: auto;
     padding-bottom: 10vh;
-    /* background-image: url(../img/eventos.jpg);
+     background-image: url(../img/eventos.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
-    background-attachment: fixed; */
+    background-attachment: fixed; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -416,7 +413,7 @@
     display: flex;
     padding: 2%;
     flex-wrap: wrap;
-    
+    animation-fill-mode: none;
     gap: 3rem;
   
   }
@@ -471,6 +468,7 @@
     font-size: 1.7em;
   }
   .comotrabajamos{
+    padding: 5vw;
   
     width: 100vw;
     height: 100vh;
@@ -494,6 +492,7 @@
     gap: 3rem;
     overflow: hiden;
     flex-wrap: wrap;
+    animation-fill-mode: none;
   }
   @keyframes mover {
     0%{
@@ -503,7 +502,7 @@
     
   }
   .comotrabajamos__primera{
-    width: 52rem;
+    width: 50rem;
     padding: 3%;
     display: flex;
     flex-direction: column;
@@ -534,7 +533,7 @@
     font-size: 1.7em;
   }
   .comotrabajamos__segunda{
-    width: 52rem;
+    width: 50rem;
     padding: 3%;
     display: flex;
     flex-direction: column;
@@ -601,14 +600,14 @@
   }
   /* --------resposive---------- */
   @media screen  and (max-width: 480px) {
-    .body{
-        background-image: url(../img/eventosMovil3.jpg);
-      background-repeat: repeat;
-      background-size: 100%;
-      background-attachment: fixed;
-    }
+   
   
     .main{
+        background-image: url(../img/eventosMovil3.jpg);
+      background-repeat:no-repeat;
+     
+      background-attachment: fixed; 
+      background-size: cover;
      
       padding-bottom: 0;
     }
@@ -636,9 +635,10 @@
     .abaut__h1{
       font-size:2em ;
     }
-    .abaut__div{
-      display: none;
+    .abaut__parrafo{
+        font-size: 1em;
     }
+      
     .quehacemos{
       margin-top: 5vh;
     }
@@ -662,6 +662,7 @@
     }
     .comotrabajamos{
       height: auto;
+      padding: 2%;
     
     }
     .comotrabajamos__div{
@@ -681,10 +682,10 @@
       padding-bottom: 5vh;
     }
     .comotrabajamos__primera{
-      width:32rem ;
+      width:35rem ;
     }
     .comotrabajamos__segunda{
-      width:32rem ;
+      width:35rem ;
     }
     .footer{
         height: auto;
@@ -694,6 +695,7 @@
         width: 60%;
         margin-left: 5vw;
         align-items: center;
+        margin-top: 2vh;
       }
       .footer__figure{
         width: 30vw;
@@ -706,6 +708,7 @@
         
       }
       .footer__social{
+        margin-bottom: 3vh;
         width: 50vw;
         display: flex;
         justify-content: space-around;
@@ -719,4 +722,4 @@
         width: 30px;
       }
     }
-  }
+  
