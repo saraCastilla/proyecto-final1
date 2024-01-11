@@ -1,25 +1,25 @@
 document.addEventListener("DOMContentLoaded", function () {
+//   hago este evento al documento para que se carge primero la pg antes de lanzar el resto de codigo de javascript
 
 
 
 
 
-
-window.addEventListener("scroll",function () {
+window.addEventListener("scroll",function () {   //este es un evento scroll que lanza una div con id = animado desde laizquierda de la pantalla a su posicion final
     let animacion = document.getElementById("animado");
    
     let posicionObjt = animacion.getBoundingClientRect().top;
      console.log(posicionObjt);
-     let tamañoDePantalla = window.innerHeight*0.8;
+     let tamañoDePantalla = window.innerHeight*0.8;  // con este bloque divido la pantalla en cifras numericas cada vez más bajas a madedida que me desplazo con el scroll hacia abajo
      if (posicionObjt < tamañoDePantalla) {
          animacion.style.animation = "mover 2s ease-out " 
          
-         
+       // si la posicion del objeto es menor que el tamaño de la pantalla antes calculada, se lanza la animacion  
          
      }
  })
 
-
+  // este bloque corresponde a la animación del objeto svg que he dividido en paht para poderlo animar
  let rectUno= document.getElementById("1")
  let rectDos= document.getElementById("2")
  let rectTres= document.getElementById("3")
@@ -30,11 +30,12 @@ window.addEventListener("scroll",function () {
  let rectOcho= document.getElementById("8")
  let rectNueve= document.getElementById("9")
  let rectDiez= document.getElementById("10")
-
+    // aqui ya he llamado a todos los paht por su id
 
  function intervalo() {
    
-
+  // esta funcion intervalo no es más que un setInterval de 2 segundos y medio de duración donde cada elemento va apareciendo uno a uno cada medio segundo
+  //que un setTimeout de medio segundo por elemento
 
     setInterval(() => {
 
@@ -101,9 +102,9 @@ window.addEventListener("scroll",function () {
     }, 2500) // debe ser un numero mayor
 
 }
-intervalo()
+intervalo()  //aqui llamo a la funcion
 
-
+// en este bloque vuelvo a proceder de la misma forma cambiando los tiempos y con los bloques de textos que aparecen en la landing pg
 let we= document.getElementById("we")
 let estamos= document.getElementById("estamos")
 let ahora= document.getElementById("ahora")
@@ -141,7 +142,7 @@ function aparicion() {
    
 
 }
-aparicion()
+aparicion()  //llamo a la función
 
 
 
