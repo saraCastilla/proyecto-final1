@@ -10,7 +10,7 @@ window.addEventListener("scroll",function () {   //este es un evento scroll que 
    
     let posicionObjt = animacion.getBoundingClientRect().top;
      console.log(posicionObjt);
-     let tamañoDePantalla = window.innerHeight*0.8;  // con este bloque divido la pantalla en cifras numericas cada vez más bajas a madedida que me desplazo con el scroll hacia abajo
+     let tamañoDePantalla = window.innerHeight *0.8;  // con este bloque divido la pantalla en cifras numericas cada vez más bajas a madedida que me desplazo con el scroll hacia abajo
      if (posicionObjt < tamañoDePantalla) {
          animacion.style.animation = "mover 2s ease-out " 
          
@@ -212,6 +212,9 @@ let cards = [
         h3: "DIGITAL"
     }
 ]
+
+
+// en este bloque estoy llamando al elemento galeria para insertar las fotos y los h3 a traves de un map
  let div = document.getElementById("galeria")
 
 
