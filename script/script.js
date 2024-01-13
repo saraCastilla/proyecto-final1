@@ -199,17 +199,20 @@ punto.forEach((cadaPunto , i) => {
     
 });
 
-
+// convirtiendo las card en una array de objetos para poder hacer un map más tarde
 let cards = [
     {
-        img: "../img/galeria/RETAIL/RETAIL_11.jpg",
-        h3: "RETAIL"
+        img: "../img/galeria/retail/retail1.jpg",
+        h3: "RETAIL",
+        imagenSegunda:
     },{
-        img: "../img/galeria/4.jpg",
-        h3: "EVENTOS"
+        img: "../img/galeria/eventos/evento.jpg",
+        h3: "EVENTOS",
+       
     },{
-        img: "../img/galeria/5.jpg",
-        h3: "DIGITAL"
+        img: "../img/galeria/digital/inversis.jpg",
+        h3: "DIGITAL",
+        
     }
 ]
 
@@ -229,6 +232,32 @@ let cards = [
         <a href="#openModal" class="carab__enlace">ver más</a>      
 
     </div>
+</div>
+<div id="openModal" class="modalDialog">
+<div class="modal">
+    <a href="#close" title="Close" class="close">X</a>
+    <div id="carrusel" class="carrusel">
+        <div class="grande">
+            <div class="img__div">
+                <img src="./img/galeria/retail/retail1.jpg" alt="img" class="img__carrusel">
+            </div>
+            <div class="img__div">
+                <img src="./img/galeria/retail/retail2.jpg" alt="img" class="img__carrusel">
+            </div>
+
+             <div class="img__div">
+                <img src="./img/galeria/retail/retail3.jpg" alt="img" class="img__carrusel">
+            </div>
+        </div>
+        <ul class="puntos">
+            <li class="punto activo">1</li>
+            <li class="punto">2</li>
+            <li class="punto">3</li>
+        </ul>
+
+    </div>
+
+</div>
 </div>`)
     
 
@@ -237,6 +266,54 @@ let cards = [
 
  });
  div.innerHTML = card.join(" ")
+
+//  let fotos = [
+//     {
+//         imgUna: "../img/galeria/RETAIL/RETAIL_11.jpg",
+//         imgDos: "../img/galeria/RETAIL/RETAIL_31.jpg",
+//         imgTres: "../img/galeria/RETAIL/RETAIL_33.jpg",
+//     },{
+//         imgUna: "../img/galeria/EVENTOS/EVENTO_21.jpg",
+//         imgDos: "../img/galeria/EVENTOS/EVENTO_42.jpg",
+//         imgTres: "../img/galeria/EVENTOS/EVENTO_8.jpg",
+        
+//     },{
+//         imgUna: "../img/galeria/DIGITAL/ejemplo_api-01.jpg",
+//         imgDos: "../img/galeria/DIGITAL/INVERSIS.jpg",
+//         imgTres: "../img/galeria/DIGITAL/MERCEDES.jpg",
+        
+//     }
+// ]
+// let carrusel = document.getElementById("carrusel")
+
+// const foto = fotos.map((foto,index) =>{
+//     return(` 
+//     <div class="grande">
+//         <div class="img__div">
+//             <img src="${foto.imgUna}" alt="img" class="img__carrusel">
+//         </div>
+//         <div class="img__div">
+//             <img src="${foto.imgDos}" alt="img" class="img__carrusel">
+//         </div>
+
+//          <div class="img__div">
+//             <img src="${foto.imgTres}" alt="img" class="img__carrusel">
+//         </div>
+//     </div>
+//     <ul class="puntos">
+//         <li class="punto activo">1</li>
+//         <li class="punto">2</li>
+//         <li class="punto">3</li>
+//     </ul>
+
+// `)
+    
+
+
+
+
+//  });
+//  carrusel.innerHTML = foto.join(" ")
 
 
 
