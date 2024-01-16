@@ -204,7 +204,7 @@ let cards = [
     {
         img: "../img/galeria/retail/retail1.jpg",
         h3: "RETAIL",
-        imagenSegunda:
+        
     },{
         img: "../img/galeria/eventos/evento.jpg",
         h3: "EVENTOS",
