@@ -2,1247 +2,885 @@
 
 
 @font-face{
-    font-family: blair;
-    src: url(../fonts/Blair\ ITC\ Medium.otf)
+  font-family: blair;
+  src: url(../fonts/Blair\ ITC\ Medium.otf)
+}
+
+@font-face{
+  font-family: flama;
+  src: url(../fonts/FlamaCondensed-Bold.ttf)
+}
+@font-face{
+  font-family: monserrat;
+  src: url(../fonts/Montserrat-Bold.ttf)
+}
+@font-face {
+  font-family: montsfina;
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+
+
+/* Aquí definimos las Custom properties */
+:root {
+    /* colores principales */
+    --naraja: rgb(246,140,104);
+    --rosa: rgb(229,90,123);
+    --verde: rgb(158,196,118);
+    --azul: rgb(0,101,128);
+    /* colores segundarios */
+    --berengena: rgba(154,52,79,0.8);
+    --turquesa: rgba(92,188,198,0.8);
+    --gris: rgba(166,155,149,0.8);
+    /* Tipografía */
+    --tipo-principal: monserrat;
+    --tipo-secundaria: 'Gloock', serif;
+    --tipo-tercera: 'poppins', serif;
+    
   }
   
-  @font-face{
-    font-family: flama;
-    src: url(../fonts/FlamaCondensed-Bold.ttf)
+  /* Reseteamos los margin y paddings de todas las etiquetas */
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    vertical-align: baseline;
   }
-  @font-face{
-    font-family: monserrat;
-    src: url(../fonts/Montserrat-Bold.ttf)
+  
+  /* Evitamos problemas con las imagenes */
+  img, picture, video, iframe, figure {
+    max-width: 100%;
+    width: 100%;
+    display: block;
+    /* opcional */
+    -o-object-fit: cover;
+       object-fit: cover;
+    /* opcional */
+    -o-object-position: center center;
+       object-position: center center;
   }
-  @font-face {
-    font-family: montsfina;
-    src: url(../fonts/Montserrat-Light.ttf);
+  
+  /* Reseteamos los enlaces para funcionar como cajas... */
+  a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: inherit;
+  }
+  
+  /* ... excepto los que se encuentran en párrafos */
+  p a {
+    display: inline;
+  }
+  
+  /* Quitamos los puntos de los <li> */
+  li {
+    list-style-type: none;
+  }
+  
+  /* Configuramos anclas suaves */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Desactivamos estilos por defecto de las principales etiquetas de texto */
+  h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+    font-size: 1em;
+    font-weight: inherit;
+    font-style: inherit;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* Evitamos problemas con los pseudoelementos de quotes */
+  blockquote:before, blockquote:after, q:before, q:after {
+    content: "";
+    content: none;
+  }
+  
+  /* Configuramos el texto que seleccionamos */
+  ::-moz-selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  ::selection {
+    background-color: var(--negro);
+    color: var(--blanco);
+  }
+  
+  /* Nivelamos problemas de tipografías y colocación de formularios */
+  form, input, textarea, select, button, label {
+    font-family: inherit;
+    font-size: inherit;
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    background-color: transparent;
+    color: inherit;
+    display: block;
+    /* opcional */
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+  }
+  
+  /* Reseteamos las tablas */
+  table, tr, td {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+  
+  /* Evitamos problemas con los SVG */
+  svg {
+    width: 100%;
+    display: block;
+    fill: currentColor;
   }
   
   
-  /* Aquí definimos las Custom properties */
-  :root {
-      /* colores principales */
-      --naraja: rgb(246,140,104);
-      --rosa: rgb(229,90,123);
-      --verde: rgb(158,196,118);
-      --azul: rgb(0,101,128);
-      /* colores segundarios */
-      --berengena: rgba(154,52,79,0.8);
-      --turquesa: rgba(92,188,198,0.8);
-      --gris: rgba(166,155,149,0.8);
-      /* Tipografía */
-      --tipo-principal: monserrat;
-      --tipo-secundaria: 'Gloock', serif;
-      --tipo-tercera: 'poppins', serif;
+  /* Configuramos la tipografía para toda la web */
+  .body {
+    min-height: 100vh;
+    font-size: 100%;
+   
+    /* opcional */
+    /* line-height: 1.4em; */
+    /* opcional */
+    -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+            hyphens: auto;
+    /* opcional */
+    font-smooth: always;
+    /* opcional */
+    -webkit-font-smoothing: antialiased;
+    /* opcional */
+    -moz-osx-font-smoothing: grayscale;
+    
+  }
+  .header{
+      width: 100vw;
+      height: 12vh;
+      padding-top: 1vh;
+      display: flex;
+      justify-content:space-between;
       
-    }
-    
-    /* Reseteamos los margin y paddings de todas las etiquetas */
-    * {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      -webkit-box-sizing: border-box;
-              box-sizing: border-box;
-      vertical-align: baseline;
-    }
-    
-    /* Evitamos problemas con las imagenes */
-    img, picture, video, iframe, figure {
-      max-width: 100%;
-      width: 100%;
-      display: block;
-      /* opcional */
-      -o-object-fit: cover;
-         object-fit: cover;
-      /* opcional */
-      -o-object-position: center center;
-         object-position: center center;
-    }
-    
-    /* Reseteamos los enlaces para funcionar como cajas... */
-    a {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      font-size: inherit;
-    }
-    
-    /* ... excepto los que se encuentran en párrafos */
-    p a {
-      display: inline;
-    }
-    
-    /* Quitamos los puntos de los <li> */
-    li {
-      list-style-type: none;
-    }
-    
-    /* Configuramos anclas suaves */
-    html {
-      scroll-behavior: smooth;
-    }
-    
-    /* Desactivamos estilos por defecto de las principales etiquetas de texto */
-    h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
-      font-size: 1em;
-      font-weight: inherit;
-      font-style: inherit;
-      text-decoration: none;
-      color: inherit;
-    }
-    
-    /* Evitamos problemas con los pseudoelementos de quotes */
-    blockquote:before, blockquote:after, q:before, q:after {
-      content: "";
-      content: none;
-    }
-    
-    /* Configuramos el texto que seleccionamos */
-    ::-moz-selection {
-      background-color: var(--negro);
-      color: var(--blanco);
-    }
-    ::selection {
-      background-color: var(--negro);
-      color: var(--blanco);
-    }
-    
-    /* Nivelamos problemas de tipografías y colocación de formularios */
-    form, input, textarea, select, button, label {
-      font-family: inherit;
-      font-size: inherit;
-      -webkit-hyphens: auto;
-          -ms-hyphens: auto;
-              hyphens: auto;
-      background-color: transparent;
-      color: inherit;
-      display: block;
-      /* opcional */
-      -webkit-appearance: none;
-         -moz-appearance: none;
-              appearance: none;
-    }
-    
-    /* Reseteamos las tablas */
-    table, tr, td {
-      border-collapse: collapse;
-      border-spacing: 0;
-    }
-    
-    /* Evitamos problemas con los SVG */
-    svg {
-      width: 100%;
-      display: block;
-      fill: currentColor;
-    }
-    
-    
-    /* Configuramos la tipografía para toda la web */
-    .body {
-      min-height: 100vh;
-      font-size: 100%;
+      align-items: center;
      
-      /* opcional */
-      /* line-height: 1.4em; */
-      /* opcional */
-      -webkit-hyphens: auto;
-          -ms-hyphens: auto;
-              hyphens: auto;
-      /* opcional */
-      font-smooth: always;
-      /* opcional */
-      -webkit-font-smoothing: antialiased;
-      /* opcional */
-      -moz-osx-font-smoothing: grayscale;
+     
+    }
+    .header__figure{
+      width: 20vw;
+      margin-left: 5vw;
+    }
+    .header__nav{
+      width: 45vw;
+      height: 20vh;
+      display: flex;
+      justify-content: space-between;
+      margin-right: 0;
+      
       
     }
-    .header{
-        width: 100vw;
-        height: 12vh;
-        padding-top: 1vh;
-        display: flex;
-        justify-content:space-between;
-        
-        align-items: center;
-       
-       
-      }
-      .header__figure{
-        width: 20vw;
-        margin-left: 5vw;
-      }
-      .header__nav{
-        width: 45vw;
-        height: 20vh;
-        display: flex;
-        justify-content: space-between;
-        margin-right: 0;
-        
-        
-      }
-      .nav__ul{
-        width: 50vw;
-        padding-right: 5vw;
-        display: flex;
-        justify-content:flex-end;
-        align-items: center;
+    .nav__ul{
+      width: 50vw;
+      padding-right: 5vw;
+      display: flex;
+      justify-content:flex-end;
+      align-items: center;
+    
+      flex-wrap: wrap;
+     
+    }
+    
+    
+    .nav__li:hover{
+      color: var(--naraja);
       
-        flex-wrap: wrap;
-       
-      }
+    }
+    .nav__li .active{
+      color: var(--naraja);
+    }
+    .nav__li{ 
+      margin: 0.5em;
+      text-align: center; 
+      font-size: 2.3em; 
+      font-family:flama;
+      font-weight: 700;
+      color: var(--azul);
       
-      
-      .nav__li:hover{
-        color: var(--naraja);
-        
+    }
+    /* ---------menu hamburguesa--------- */
+    .hamburger{
+      display: none;
+      position:fixed;
+      background-color:transparent;
+      left:0;
+      top:0;
+      height:30px;
+      width:30px;
+      padding:20px 20px;
+      -webkit-transform:translate3d(0, 0, 0);
+      transform:translate3d(0, 0, 0);
+      -webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      z-index:1002;
+      cursor:pointer;
+      -webkit-user-select:none;
+      -moz-user-select:none;
+      -ms-user-select:none;
+      user-select:none
+    }
+    .hamburger.is-active{
+      background-color:none;
+    }
+    ._layer{
+      background:var(--azul);
+      margin-bottom:4px;
+      border-radius:2px;
+      width:28px;
+      height:4px;
+      opacity:1;
+      -webkit-transform:translate3d(0, 0, 0);
+      transform:translate3d(0, 0, 0);
+      -webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+      transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+    }
+    .hamburger:hover .-top{
+      -webkit-transform:translateY(-100%);
+      -ms-transform:translateY(-100%);
+      transform:translateY(-100%);
+    }
+    .hamburger:hover .-bottom{
+      -webkit-transform:translateY(50%);
+      -ms-transform:translateY(100%);
+      transform:translateY(100%);
       }
-      .nav__li .active{
-        color: var(--naraja);
-      }
-      .nav__li{ 
-        margin: 0.5em;
-        text-align: center; 
-        font-size: 2.3em; 
-        font-family:flama;
-        font-weight: 700;
-        color: var(--azul);
-        
-      }
-      /* ---------menu hamburguesa--------- */
-      .hamburger{
-        display: none;
-        position:fixed;
-        background-color:transparent;
-        left:0;
-        top:0;
-        height:30px;
-        width:30px;
-        padding:20px 20px;
-        -webkit-transform:translate3d(0, 0, 0);
-        transform:translate3d(0, 0, 0);
-        -webkit-transition:-webkit-transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-        transition:transform 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-        z-index:1002;
-        cursor:pointer;
-        -webkit-user-select:none;
-        -moz-user-select:none;
-        -ms-user-select:none;
-        user-select:none
-      }
-      .hamburger.is-active{
-        background-color:none;
-      }
-      ._layer{
-        background:var(--azul);
-        margin-bottom:4px;
-        border-radius:2px;
-        width:28px;
-        height:4px;
-        opacity:1;
-        -webkit-transform:translate3d(0, 0, 0);
-        transform:translate3d(0, 0, 0);
-        -webkit-transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-        transition:all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
-      }
-      .hamburger:hover .-top{
-        -webkit-transform:translateY(-100%);
-        -ms-transform:translateY(-100%);
-        transform:translateY(-100%);
-      }
-      .hamburger:hover .-bottom{
-        -webkit-transform:translateY(50%);
-        -ms-transform:translateY(100%);
-        transform:translateY(100%);
-        }
-      .hamburger.is-active .-top{
-        -webkit-transform:translateY(200%) rotate(45deg) ;
-        -ms-transform:translateY(200%) rotate(45deg) ;
-        transform:translateY(200%) rotate(45deg) ;
-      }
-      .hamburger.is-active .-mid{
-        opacity:0;
-      }
-      .hamburger.is-active .-bottom{
-        -webkit-transform:translateY(-200%) rotate(135deg) ;
-        -ms-transform:translateY(-200%) rotate(135deg) ;
-        transform:translateY(-200%) rotate(135deg) ;
-      }
-      
-      .menuppal.is_active{
-        transform: translate3d(0px, 0px, 0px);
-      }
-      .menuppal{
-         background-color:rgba(255, 255, 255, 0.733);
-          bottom: 0;
-          height: 100%;
-          left: 0;
-          overflow-y: scroll;
-          position: fixed;
-          top: 0;
-          transform: translate3d(0px, -100%, 0px);
-          transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
-          width: 100%;
-          z-index: 1001;
-      }
-      .menuppal ul{
-        margin:0;padding:0;
-      }
-      .menuppal ul li { 
-        list-style: none;
-        text-align:center;
-        font-family: Verdadna, Arial, Helvetica;
-        color:white;
-        font-size:1.5rem;
-        line-height:3em;
-        height:3em;
-        color:var(--naraja);
-        text-transform:none;
-        font-weight:bold;
-      }
-      .menuppal ul li a{
-        text-decoration:none;
-        color:var(--azul);
-      }
-      .menuppal ul li a:hover{
-        text-decoration:none;
-        color:var(--naraja);
-      }
-     .trabajos__main{
-        background-image: url(../img/fondo2.jpg);
-        background-repeat: no-repeat;
-        background-size: 100%;
-        background-attachment: fixed;
-      } 
-      .trabajo{
-        padding-top: 10vh;
-       
-        position: relative;
-        width: 100vw;
-        height: auto;
-      }
-      .trabajo__titulo{
-        text-align: center;
-        padding-top: 10vw;
-        font-family: monserrat;
-        font-size: 3em;
-        color: var(--azul);
-      }
-      .trabajo__galeria{  
-        max-width: 100vw;
-       
-        padding: 7% 15%;
-       
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        
-        z-index: 4;
-        
-      
-      }
-      .trabajo__card{ 
-        position: relative;
-        
-      }
-      .cardA__div{
-        width: 400px;
-        height:400px;
-        overflow: hidden;
-        margin: 10px;
-      
-        
-        
-       
-      }
-      .trabajo__img{
+    .hamburger.is-active .-top{
+      -webkit-transform:translateY(200%) rotate(45deg) ;
+      -ms-transform:translateY(200%) rotate(45deg) ;
+      transform:translateY(200%) rotate(45deg) ;
+    }
+    .hamburger.is-active .-mid{
+      opacity:0;
+    }
+    .hamburger.is-active .-bottom{
+      -webkit-transform:translateY(-200%) rotate(135deg) ;
+      -ms-transform:translateY(-200%) rotate(135deg) ;
+      transform:translateY(-200%) rotate(135deg) ;
+    }
+    
+    .menuppal.is_active{
+      transform: translate3d(0px, 0px, 0px);
+    }
+    .menuppal{
+       background-color:rgba(255, 255, 255, 0.733);
+        bottom: 0;
+        height: 100%;
+        left: 0;
+        overflow-y: scroll;
+        position: fixed;
+        top: 0;
+        transform: translate3d(0px, -100%, 0px);
+        transition: transform 0.35s cubic-bezier(0.05, 1.04, 0.72, 0.98) 0s;
         width: 100%;
-        transition: 0.5s;
-        object-fit: cover;
-        
-      }
+        z-index: 1001;
+    }
+    .menuppal ul{
+      margin:0;padding:0;
+    }
+    .menuppal ul li { 
+      list-style: none;
+      text-align:center;
+      font-family: Verdadna, Arial, Helvetica;
+      color:white;
+      font-size:1.5rem;
+      line-height:3em;
+      height:3em;
+      color:var(--naraja);
+      text-transform:none;
+      font-weight:bold;
+    }
+    .menuppal ul li a{
+      text-decoration:none;
+      color:var(--azul);
+    }
+    .menuppal ul li a:hover{
+      text-decoration:none;
+      color:var(--naraja);
+    }
+   .trabajos__main{
+      background-image: url(../img/fondo2.jpg);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+    } 
+    .proyectos{
+      position: relative;
+      width: 100vw;
+      height: AUTO;
+    }
+    .proyecto__titulo{
+      text-align: center;
+      padding-top: 10vw;
+      font-family: monserrat;
+      font-size: 3em;
+      color: var(--azul);
+    }
+    .proyectos__galeria{  
+      max-width: 100vw;
+     
+      padding: 7% 15%;
+     
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       
-      .trabajo__carab{
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        width: 400px;
-        height: 400px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 5%;
-        background-color: rgba(0, 0, 0, 0);
-        opacity: 1;
-        transition: 1s;
-      }
-      .trabajo__h3{
-        color: white;
-        text-align: center;
-        font-family: montserrat;
-        font-size: 2.7em;
-        font-weight: 700;
-      }
-      .trabajo__enlace{
-        color:var(--naraja);
-        font-family:var(--tipo-tercera);
-        font-size: 2em;
-        opacity: 0;
-      }
-      .trabajo__enlace:hover{
-        color: white;
-      }
-      /* -----------modal--------- */
-         .modalDialog {
-          position: fixed;
-          
-          top: 0;
-          right: 0;
-          bottom: 0;
-          left: 0;
-          background: rgba(0,0,0,0.8);
-          z-index: 99999;
-          opacity:0;
-          -webkit-transition: opacity 400ms ease-in;
-          -moz-transition: opacity 400ms ease-in;
-          transition: opacity 400ms ease-in;
-          pointer-events: none;
-      } 
-      .modalDialog:target {
-          opacity:1;
-          pointer-events: auto;
-      }
-      .modalDialog > div {
-          width: 1200px;
-        height: 400px;
-          position: relative;
-           margin: 10% auto; 
-          /* padding: 5px 20px 13px 20px; */
-          border-radius: 10px;
-          background: #fff;
-          background: -moz-linear-gradient(#fff, #999);
-          background: -webkit-linear-gradient(#fff, #999);
-          background: -o-linear-gradient(#fff, #999);
-        -webkit-transition: opacity 400ms ease-in;
+      z-index: 4;
+      
+    
+    }
+    .proyectos__card{ 
+      position: relative;
+      
+    }
+    .card__div{
+      width: 400px;
+      height:400px;
+      overflow: hidden;
+      margin: 10px;
+    
+      
+      
+     
+    }
+    .galeria__img{
+      width: 100%;
+      transition: 0.5s;
+      object-fit: cover;
+      
+    }
+    
+    .proyectos__carab{
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      width: 400px;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5%;
+      background-color: rgba(0, 0, 0, 0);
+      opacity: 1;
+      transition: 1s;
+    }
+    .carab__h3{
+      color: white;
+      text-align: center;
+      font-family: montserrat;
+      font-size: 2.7em;
+      font-weight: 700;
+    }
+    .carab__enlace{
+      color:var(--naraja);
+      font-family:var(--tipo-tercera);
+      font-size: 2em;
+      opacity: 0;
+    }
+    .carab__enlace:hover{
+      color: white;
+    }
+    /* -----------modal--------- */
+    .modalDialog {
+      position: fixed;
+      
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0,0,0,0.8);
+      z-index: 99999;
+      opacity:0;
+      -webkit-transition: opacity 400ms ease-in;
       -moz-transition: opacity 400ms ease-in;
       transition: opacity 400ms ease-in;
-      } 
-      .close {
-          background:white;
-          color: var(--azul);
-          line-height: 25px;
-          position: absolute;
-          right: -12px;
-          text-align: center;
-          top: -10px;
-          width: 50px;
-        height: 50px;
-          text-decoration: none;
-          font-weight: bold;
-        font-size: 2em;
-        text-align: center;
-        padding-top: .4em;
-          /* -webkit-border-radius: 12px;
-          -moz-border-radius: 12px; */
-          border-radius: 50%;
-          -moz-box-shadow: 1px 1px 3px #000;
-          -webkit-box-shadow: 1px 1px 3px #000;
-          box-shadow: 1px 1px 3px #000;
-      }
-      .close:hover { background:var(--azul);
-        color: white;
-       }
-      .carrusel{
-        width: 100%;
-        height: 61vh;
-       
-      
-        overflow-Y: hidden; 
-        
-        display: flex;
-       
-        background-color: blue;
-      
-      }
-      .grande{
-        width: 100%;
-        height: 300%;
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content:center;
-        align-items: center;
-        transition: all .7s ease;
-        transform: translateY(-33.3%);
-      
-      }
-      .img__carrusel{
-        height:calc(100%/3);
-        min-width: 65vh;
-      }
-      .puntos{
-        width: 150%;
-        height: 150%;
-       margin-top: 0;
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-items: center;
-        
-        background-color: var(--azul);
-        gap: 5%;
-      }
-      .punto{
-        background-color: aliceblue;
-        list-style: none;
-        width: 2.7em;
-        height: 2.7em;
-        text-align: center;
-        justify-content: center;
-        font-size: 1.5em;
-        padding:0.7em; 
-        border-radius: 50%;
-      }
-      .punto.activo{
-        background-color: blue;
-      }  
-      .trabajo__card:hover .trabajo__carab{
-        background-color:rgba(0,101,128,.8);
-      }
-      .trabajo__card:hover .trabajo__enlace{
-        opacity: 1;
-      }
-      .trabajo__card:hover .trabajo__img{
-        transform: scale(1.2);
-      
-      }
-      .trabajo__naranja{
-        position: absolute;
-        top: 50px;
-        width: 500px;
-        height: 50px;
-        background-color: var(--naraja);
-        opacity: 0.8;
-      }
+      pointer-events: none;
+    }
+    .modalDialog:target {
+      opacity:1;
+      pointer-events: auto;
+    }
+    .modalDialog > div {
+      width: 1200px;
+      height: 400px;
+      position: relative;
+       margin: 10% auto; 
+      /* padding: 5px 20px 13px 20px; */
+      border-radius: 10px;
+      background: #fff;
+      background: -moz-linear-gradient(#fff, #999);
+      background: -webkit-linear-gradient(#fff, #999);
+      background: -o-linear-gradient(#fff, #999);
+      -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    }
+    .close {
+      background:white;
+      color: var(--azul);
+      line-height: 25px;
+      position: absolute;
+      right: -12px;
+      text-align: center;
+      top: -10px;
+      width: 50px;
+      height: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 2em;
+      text-align: center;
+      padding-top: .4em;
+      /* -webkit-border-radius: 12px;
+      -moz-border-radius: 12px; */
+      border-radius: 50%;
+      -moz-box-shadow: 1px 1px 3px #000;
+      -webkit-box-shadow: 1px 1px 3px #000;
+      box-shadow: 1px 1px 3px #000;
+    }
+    .close:hover { background:var(--azul);
+      color: white;
+     }
+    .carrusel{
+      width: 100%;
+      height: 61vh;
      
-      .trabajo__turquesa{
-        position: absolute;
-        top: 0;
-        right: 50px;
-        width: 150px;
-        height: 500px;
-        background-color: var(--turquesa);
-        opacity: .8;
+    
+      overflow-Y: hidden; 
       
-      }
-      .trabajo__berenjena{
-        position: absolute;
-        bottom: 0;
-        right: 0px;
-        width: 600px;
-        height: 50px;
-        background-color: var(--berengena);
-        opacity: .8;
+      display: flex;
+     
+      background-color: blue;
+    
+    }
+    .grande{
+      width: 100%;
+      height: 300%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content:center;
+      align-items: center;
+      transition: all .7s ease;
+      transform: translateY(-33.3%);
+    
+    }
+    .img__div{
+      height:calc(100%/3);
+      min-width: 32vw;
+    }
+    .img__carrusel{
+      width: 100%;
+    }
+    .puntos{
+      width: 150%;
+      height: 150%;
+     margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
       
-      }
-      .trabajo__gris{
-        position: absolute;
-        bottom: 0;
-        left: 150px;
-        width: 50px;
-        height: 170px;
-        background-color: var(--gris);
-        opacity: .8;
+      background-color: var(--rosa);
+      gap: 5%;
+    }
+    .punto{
+      background-color: var(--rosa);
+      border: 1px solid white;
+      color: white;
+      list-style: none;
+      width: 2.7em;
+      height: 2.7em;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      padding:0.7em; 
+      border-radius: 50%;
+    }
+    .punto.activo{
+      background-color:white;
       
-      }
-      .footer{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100vw;
-        background-color: var(--azul);
-        height: 30vh;
-        gap: 5vh;
-      }
-      .footer__div{
-        width: 45vw;
-        margin-top: 5vw;
-        margin-left: 7vw;
-        display: flex;
-        flex-direction: row;
-        gap: 2vw;
-      }
-      .footer__figure{
-        width: 17vw;
-      }
-      .footer__h2{
-        color: white;
-        font-family: blair;
-        font-size: 3.7em;
-        line-height: 0.9;
-        
-      }
+      color:var(--rosa);
+    }
+    .imagenes{
+      width: 100%;
+      height: 61vh;
+     
+    
+      overflow-Y: hidden; 
       
+      display: flex;
+     
+      background-color:var(--verde)
+    
+    }
+    .fotos{
+      width: 100%;
+      height: 300%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content:center;
+      align-items: center;
+      transition: all .7s ease;
+      transform: translateY(-33.3%);
+    
+    }
+    .puntosDos{
+      width: 150%;
+      height: 150%;
+     margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
       
-      .footer__social{
-        width: 35vw;
-        display: flex;
-        justify-content: space-around;
-      }
-      .social__ul{
-        width: 20vw;
-        display: flex;
-        justify-content: space-around;
-      }
-      .bi{
-        fill: white;
-      }
-      @media screen and (min-width:1381px) and (max-width:1919px) {
-        .body{
-            background-image: url(../img/fondoMovil.jpg);
-            background-attachment: fixed;
-        }
-
-        .header__figure{
-            margin-left: 35vw;
-            margin-top: 20vh;
-            width: 25em;
-          }
-          .header__nav{
-            display: none;
-          }
-          .nav__ul{
-            display: none;
-          }
-          .hamburger{
-            display: block;
-          }
-          .trabajos__main{
-            background-image: url(../img/fondo2.jpg);
-            background-attachment: fixed;
-            background-size: contain;
-          }
-          .trabajo{
-            padding-top: 15vh;
-          }
-          .trabajo__naranja{
-            top:5rem;
-             width: 10rem;
-            height: 2em;
-          }
-          .trabajo__turquesa{
-            top: 0;
-            right: 0;
-             width: 1rem;
-            height:10rem;
-          }
-          .trabajo__berenjena{
-            
-            bottom:  0.7rem;
-             width: 10rem;
-            height: 1em;
-          }
-          .trabajo__titulo{
-            
-            font-size: 2.7em;
-            
-          }
-          .trabajo__galeria{
-              padding: 7% 0;
-          }
-          /* .cardA__div{
-              width: 300px;
-              height: 300px;
-          }
-          .trabajo__card{
-            
-            width: 300px;
-            height:300px;
-            overflow: hidden;
-            margin: 10px;
-          } 
-          .trabajo__carab{
-            
-            width: 300px;
-            height: 300px;
-          } 
-          .trabajo__h3{
-            font-size: 1.7em;
-          }
-          .trabajo__enlace{
-            font-size: 1em; */
-          }
-          .modalDialog > div{
-            width:300px ;
-            height: auto;
-          }
-          .carrusel{
-            width: 300px;
-          }
-          .grande{
-            width: 150px;
-          }
-          .img__carrusel{
-            width: 150px;
-          }
-          .puntos{
-            width: 150px;
-          } 
-          .footer{
-              height: auto;
-              gap: 2vh;
-            }
-            .footer__div{
-              width: 60%;
-              margin-left: 5vw;
-              align-items: center;
-            }
-            .footer__figure{
-              width: 30vw;
-            }
-            .footer__h2{
-              color: white;
-              font-family: blair;
-              font-size: 1em;
-              line-height: 1.5em;
-              
-            }
-            .footer__social{
-              margin-bottom: 3vh;
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .social__ul{
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .bi{
-              width: 30px;
-            }
-
-
+      background-color: var(--verde);
+      gap: 5%;
+    }
+    .puntoDos{
+      background-color: var(--verde);
+      border: 1px solid white;
+      color: white;
+      list-style: none;
+      width: 2.7em;
+      height: 2.7em;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      padding:0.7em; 
+      border-radius: 50%;
+    }
+    .puntoDos.activo{
+      background-color:white;
       
-      @media screen and (min-width:1025px) and (max-width: 1380px)  {
-        .body{
-            background-image: url(../img/fondoMovil.jpg);
-            background-attachment: fixed;
-        }
-
-        .header__figure{
-            margin-left: 35vw;
-            margin-top: 20vh;
-            width: 25em;
-          }
-          .header__nav{
-            display: none;
-          }
-          .nav__ul{
-            display: none;
-          }
-          .hamburger{
-            display: block;
-          }
-          .trabajos__main{
-            background-image: url(../img/fondo2.jpg);
-            background-attachment: fixed;
-            background-size: contain;
-          }
-          .trabajo{
-            padding-top: 15vh;
-          }
-          .trabajo__naranja{
-            top:5rem;
-             width: 10rem;
-            height: 2em;
-          }
-          .trabajo__turquesa{
-            top: 0;
-            right: 0;
-             width: 1rem;
-            height:10rem;
-          }
-          .trabajo__berenjena{
-            
-            bottom:  0.7rem;
-             width: 10rem;
-            height: 1em;
-          }
-          .trabajo__titulo{
-            
-            font-size: 2.7em;
-            
-          }
-          .trabajo__galeria{
-              padding: 7% 0;
-          }
-          /* .cardA__div{
-              width: 300px;
-              height: 300px;
-          }
-          .trabajo__card{
-            
-            width: 300px;
-            height:300px;
-            overflow: hidden;
-            margin: 10px;
-          } 
-          .trabajo__carab{
-            
-            width: 300px;
-            height: 300px;
-          } 
-          .trabajo__h3{
-            font-size: 1.7em;
-          }
-          .trabajo__enlace{
-            font-size: 1em; */
-          }
-          .modalDialog > div{
-            width:300px ;
-            height: auto;
-          }
-          .carrusel{
-            width: 300px;
-          }
-          .grande{
-            width: 150px;
-          }
-          .img__carrusel{
-            width: 150px;
-          }
-          .puntos{
-            width: 150px;
-          } 
-          .footer{
-              height: auto;
-              gap: 2vh;
-            }
-            .footer__div{
-              width: 60%;
-              margin-left: 5vw;
-              align-items: center;
-            }
-            .footer__figure{
-              width: 30vw;
-            }
-            .footer__h2{
-              color: white;
-              font-family: blair;
-              font-size: 1em;
-              line-height: 1.5em;
-              
-            }
-            .footer__social{
-              margin-bottom: 3vh;
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .social__ul{
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .bi{
-              width: 30px;
-            }
-
+      color: var(--verde);
+    }
+    .imagenes-dos{
+      width: 100%;
+      height: 61vh;
+     
+    
+      overflow-Y: hidden; 
       
-      @media screen and (min-width: 907px) and (max-width: 1024px)  {
-        .body{
-            background-image: url(../img/fondoMovil.jpg);
-            background-attachment: fixed;
-        }
-
-        .header__figure{
-            margin-left: 30vw;
-            margin-top: 20vh;
-            width: 25em;
-          }
-          .header__nav{
-            display: none;
-          }
-          .nav__ul{
-            display: none;
-          }
-          .hamburger{
-            display: block;
-          }
-          .trabajos__main{
-            background-image: url(../img/fondo2.jpg);
-            background-attachment: fixed;
-            background-size: contain;
-          }
-          .trabajo{
-            padding-top: 15vh;
-          }
-          .trabajo__naranja{
-            top:5rem;
-             width: 10rem;
-            height: 2em;
-          }
-          .trabajo__turquesa{
-            top: 0;
-            right: 0;
-             width: 1rem;
-            height:10rem;
-          }
-          .trabajo__berenjena{
-            
-            bottom:  0.7rem;
-             width: 10rem;
-            height: 1em;
-          }
-          .trabajo__titulo{
-            
-            font-size: 2.7em;
-            
-          }
-          .trabajo__galeria{
-              padding: 7% 0;
-          }
-          .cardA__div{
-              width: 300px;
-              height: 300px;
-          }
-          .trabajo__card{
-            
-            width: 300px;
-            height:300px;
-            overflow: hidden;
-            margin: 10px;
-          } 
-          .trabajo__carab{
-            
-            width: 300px;
-            height: 300px;
-          } 
-          .trabajo__h3{
-            font-size: 1.7em;
-          }
-          .trabajo__enlace{
-            font-size: 1em;
-          }
-          .modalDialog > div{
-            width:300px ;
-            height: auto;
-          }
-          .carrusel{
-            width: 300px;
-          }
-          .grande{
-            width: 150px;
-          }
-          .img__carrusel{
-            width: 150px;
-          }
-          .puntos{
-            width: 150px;
-          } 
-          .footer{
-              height: auto;
-              gap: 2vh;
-            }
-            .footer__div{
-              width: 60%;
-              margin-left: 5vw;
-              align-items: center;
-            }
-            .footer__figure{
-              width: 30vw;
-            }
-            .footer__h2{
-              color: white;
-              font-family: blair;
-              font-size: 1em;
-              line-height: 1.5em;
-              
-            }
-            .footer__social{
-              margin-bottom: 3vh;
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .social__ul{
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .bi{
-              width: 30px;
-            }
-      }
-      @media screen and (min-width: 769px) and (max-width: 906px)  {
-        .body{
-            background-image: url(../img/fondoMovil.jpg);
-            background-attachment: fixed;
-        }
-
-        .header__figure{
-            margin-left: 30vw;
-            margin-top: 20vh;
-            width: 20em;
-          }
-          .header__nav{
-            display: none;
-          }
-          .nav__ul{
-            display: none;
-          }
-          .hamburger{
-            display: block;
-          }
-          .trabajos__main{
-            background-image: url(../img/fondoMovil3.jpg);
-            background-attachment: fixed;
-            background-size: contain;
-          }
-          .trabajo{
-            padding-top: 15vh;
-          }
-          .trabajo__naranja{
-            top:5rem;
-             width: 10rem;
-            height: 2em;
-          }
-          .trabajo__turquesa{
-            top: 0;
-            right: 0;
-             width: 1rem;
-            height:10rem;
-          }
-          .trabajo__berenjena{
-            
-            bottom:  0.7rem;
-             width: 10rem;
-            height: 1em;
-          }
-          .trabajo__titulo{
-            
-            font-size: 2.7em;
-            
-          }
-          .trabajo__galeria{
-              padding: 7% 0;
-          }
-          .cardA__div{
-              width: 300px;
-              height: 300px;
-          }
-          .trabajo__card{
-            
-            width: 300px;
-            height:300px;
-            overflow: hidden;
-            margin: 10px;
-          } 
-          .trabajo__carab{
-            
-            width: 300px;
-            height: 300px;
-          } 
-          .trabajo__h3{
-            font-size: 1.7em;
-          }
-          .trabajo__enlace{
-            font-size: 1em;
-          }
-          .modalDialog > div{
-            width:300px ;
-            height: auto;
-          }
-          .carrusel{
-            width: 300px;
-          }
-          .grande{
-            width: 150px;
-          }
-          .img__carrusel{
-            width: 150px;
-          }
-          .puntos{
-            width: 150px;
-          } 
-          .footer{
-              height: auto;
-              gap: 2vh;
-            }
-            .footer__div{
-              width: 60%;
-              margin-left: 5vw;
-              align-items: center;
-            }
-            .footer__figure{
-              width: 30vw;
-            }
-            .footer__h2{
-              color: white;
-              font-family: blair;
-              font-size: 1em;
-              line-height: 1.5em;
-              
-            }
-            .footer__social{
-              margin-bottom: 3vh;
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .social__ul{
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .bi{
-              width: 30px;
-            }
-      }
-      @media screen and (min-width:481px)  and (max-width:768px) {
-        .body{
-            background-image: url(../img/fondoMovil.jpg);
-            background-attachment: fixed;
-            background-attachment: cover;
-        }
-        
-          .header__figure{
-            margin-left: 25vw;
-            margin-top: 20vh;
-            width: 15em;
-          }
-          .header__nav{
-            display: none;
-          }
-          .nav__ul{
-            display: none;
-          }
-          .hamburger{
-            display: block;
-          }
-          .trabajos__main{
-            background-image: url(../img/fondoMovil3.jpg);
-            background-attachment: fixed;
-            background-size: contain;
-          }
-          .trabajo{
-            padding-top: 15vh;
-          }
-          .trabajo__naranja{
-            top:5rem;
-             width: 10rem;
-            height: 2em;
-          }
-          .trabajo__turquesa{
-            top: 0;
-            right: 0;
-             width: 1rem;
-            height:10rem;
-          }
-          .trabajo__berenjena{
-            
-            bottom:  0.7rem;
-             width: 10rem;
-            height: 1em;
-          }
-          .trabajo__titulo{
-            
-            font-size: 1.5em;
-            
-          }
-          .trabajo__galeria{
-              padding: 7% 0;
-          }
-          .cardA__div{
-              width: 300px;
-              height: 300px;
-          }
-          .trabajo__card{
-            
-            width: 300px;
-            height:300px;
-            overflow: hidden;
-            margin: 10px;
-          } 
-          .trabajo__carab{
-            
-            width: 300px;
-            height: 300px;
-          } 
-          .trabajo__h3{
-            font-size: 1.7em;
-          }
-          .trabajo__enlace{
-            font-size: 1em;
-          }
-          .modalDialog > div{
-            width:300px ;
-            height: auto;
-          }
-          .carrusel{
-            width: 300px;
-          }
-          .grande{
-            width: 150px;
-          }
-          .img__carrusel{
-            width: 150px;
-          }
-          .puntos{
-            width: 150px;
-          } 
-          .footer{
-              height: auto;
-              gap: 2vh;
-            }
-            .footer__div{
-              width: 60%;
-              margin-left: 5vw;
-              align-items: center;
-            }
-            .footer__figure{
-              width: 30vw;
-            }
-            .footer__h2{
-              color: white;
-              font-family: blair;
-              font-size: 1em;
-              line-height: 1.5em;
-              
-            }
-            .footer__social{
-              margin-bottom: 3vh;
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .social__ul{
-              width: 50vw;
-              display: flex;
-              justify-content: space-around;
-            }
-            .bi{
-              width: 30px;
-            }
-
-      }
-      @media screen and (max-width: 480px) {
-        .body{
-            background-image: url(../img/fondoMovil.jpg);
-            background-attachment: fixed;
-        }
+      display: flex;
+     
+      background-color:var(--naraja);
+    
+    }
+    .fotos-dos{
+      width: 100%;
+      height: 300%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content:center;
+      align-items: center;
+      transition: all .7s ease;
+      transform: translateY(-33.3%);
+    
+    }
+    .puntos-tres{
+      width: 150%;
+      height: 150%;
+     margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
       
-        .trabajos__main{
+      background-color: var(--naranja);
+      gap: 5%;
+    }
+    .punto-tres{
+      background-color: var(--naranja);
+      border: 1px solid white;
+      color: white;
+      list-style: none;
+      width: 2.7em;
+      height: 2.7em;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      padding:0.7em; 
+      border-radius: 50%;
+    }
+    .punto-tres.activo{
+      background-color:white;  
+      color:var(--naraja);
+    }
+    .imagenes-tres{
+      width: 100%;
+      height: 61vh;
+     
+    
+      overflow-Y: hidden; 
+      
+      display: flex;
+     
+      background-color:var(--turquesa);
+    
+    }
+    .fotos-tres{
+      width: 100%;
+      height: 300%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content:center;
+      align-items: center;
+      transition: all .7s ease;
+      transform: translateY(-33.3%);
+    
+    }
+    .puntos-cuatro{
+      width: 150%;
+      height: 150%;
+     margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      
+      background-color: var(--turquesa);
+      gap: 5%;
+    }
+    .punto-cuatro{
+      background-color: var(--turquesa);
+      border: 1px solid white;
+      color: white;
+      list-style: none;
+      width: 2.7em;
+      height: 2.7em;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      padding:0.7em; 
+      border-radius: 50%;
+    }
+    .punto-cuatro.activo{
+      background-color:white;  
+      color:var(--turquesa);
+    }
+    .imagenes-cuatro{
+      width: 100%;
+      height: 61vh;
+     
+    
+      overflow-Y: hidden; 
+      
+      display: flex;
+     
+      background-color:var(--turquesa);
+    
+    }
+    .fotos-cuatro{
+      width: 100%;
+      height: 300%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content:center;
+      align-items: center;
+      transition: all .7s ease;
+      transform: translateY(-33.3%);
+    
+    }
+    .puntos-cinco{
+      width: 150%;
+      height: 150%;
+     margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      
+      background-color: var(--gris);
+      gap: 5%;
+    }
+    .punto-cinco{
+      background-color: var(--gris);
+      border: 1px solid white;
+      color: white;
+      list-style: none;
+      width: 2.7em;
+      height: 2.7em;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      padding:0.7em; 
+      border-radius: 50%;
+    }
+    .punto-cinco.activo{
+      background-color:white;  
+      color:var(--gris);
+    }
+    .imagenes-cinco{
+      width: 100%;
+      height: 61vh;
+     
+    
+      overflow-Y: hidden; 
+      
+      display: flex;
+     
+      background-color:var(--gris);
+    
+    }
+    .fotos-cinco{
+      width: 100%;
+      height: 300%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content:center;
+      align-items: center;
+      transition: all .7s ease;
+      transform: translateY(-33.3%);
+    
+    }
+    .puntos-seis{
+      width: 150%;
+      height: 150%;
+     margin-top: 0;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: center;
+      
+      background-color: var(--berengena);
+      gap: 5%;
+    }
+    .punto-seis{
+      background-color: var(--berengena);
+      border: 1px solid white;
+      color: white;
+      list-style: none;
+      width: 2.7em;
+      height: 2.7em;
+      text-align: center;
+      justify-content: center;
+      font-size: 1.5em;
+      padding:0.7em; 
+      border-radius: 50%;
+    }
+    .punto-seis.activo{
+      background-color:white;  
+      color:var(--naraja);
+    }
+    
+    
+    
+    
+    .proyectos__card:hover .proyectos__carab{
+      background-color:rgba(0,101,128,.8);
+    }
+    .proyectos__card:hover .carab__enlace{
+      opacity: 1;
+    }
+    .proyectos__card:hover .galeria__img{
+      transform: scale(1.2);
+    
+    }
+    .proyectos__naranja{
+      position: absolute;
+      top: 50px;
+      width: 500px;
+      height: 50px;
+      background-color: var(--naraja);
+      opacity: 0.8;
+    }
+    
+    .proyectos__turquesa{
+      position: absolute;
+      top: 0;
+      right: 50px;
+      width: 150px;
+      height: 500px;
+      background-color: var(--turquesa);
+      opacity: .8;
+    
+    }
+    .proyectos__berenjena{
+      position: absolute;
+      bottom: 0;
+      right: 0px;
+      width: 600px;
+      height: 50px;
+      background-color: var(--berengena);
+      opacity: .8;
+    
+    }
+    .proyectos__gris{
+      position: absolute;
+      bottom: 0;
+      left: 150px;
+      width: 50px;
+      height: 170px;
+      background-color: var(--gris);
+      opacity: .8;
+    
+    }
+    
+    .footer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100vw;
+      background-color: var(--azul);
+      height: 30vh;
+      gap: 5vh;
+    }
+    .footer__div{
+      width: 45vw;
+      margin-top: 5vw;
+      margin-left: 7vw;
+      display: flex;
+      flex-direction: row;
+      gap: 2vw;
+    }
+    .footer__figure{
+      width: 17vw;
+    }
+    .footer__h2{
+      color: white;
+      font-family: blair;
+      font-size: 3.7em;
+      line-height: 0.9;
+      
+    }
+    
+    
+    .footer__social{
+      width: 35vw;
+      display: flex;
+      justify-content: space-around;
+    }
+    .social__ul{
+      width: 20vw;
+      display: flex;
+      justify-content: space-around;
+    }
+    .bi{
+      fill: white;
+    }
+
+    
+    @media screen and (min-width:1025px) and (max-width: 1380px)  {
+      .body{
           background-image: url(../img/fondoMovil.jpg);
-          background-size: cover;
-        }
-      
-        .header__figure{
-          margin-left: 18vw;
+          background-attachment: fixed;
+      }
+
+      .header__figure{
+          margin-left: 35vw;
           margin-top: 20vh;
-          width: 15em;
+          width: 25em;
         }
         .header__nav{
           display: none;
@@ -1254,58 +892,184 @@
           display: block;
         }
         .trabajos__main{
-          background-image: url(../img/fondoMovil3.jpg);
+          background-image: url(../img/fondo2.jpg);
           background-attachment: fixed;
           background-size: contain;
         }
-        .trabajo{
+        .proyectos{
           padding-top: 15vh;
         }
-        .trabajo__naranja{
+        .proyectos__naranja{
           top:5rem;
            width: 10rem;
           height: 2em;
         }
-        .trabajo__turquesa{
+        .proyectos__turquesa{
           top: 0;
           right: 0;
            width: 1rem;
           height:10rem;
         }
-        .trabajo__berenjena{
+        .proyectos__berenjena{
           
           bottom:  0.7rem;
            width: 10rem;
           height: 1em;
         }
-        .trabajo__titulo{
+        .proyecto__titulo{
           
-          font-size: 1.5em;
+          font-size: 2.7em;
           
         }
-        .trabajo__galeria{
+        .proyectos__galeria{
             padding: 7% 0;
         }
-        .cardA__div{
+         .card__div{
             width: 300px;
             height: 300px;
         }
-        .trabajo__card{
+        .proyectos__card{
           
           width: 300px;
           height:300px;
           overflow: hidden;
           margin: 10px;
         } 
-        .trabajo__carab{
+        .proyectos__carab{
           
           width: 300px;
           height: 300px;
         } 
-        .trabajo__h3{
+        .carab__h3{
           font-size: 1.7em;
         }
-        .trabajo__enlace{
+        .carab__enlace{
+          font-size: 1em; 
+        }
+        .modalDialog > div{
+          width:300px ;
+          height: auto;
+        }
+        .carrusel{
+          width: 300px;
+        }
+        .grande{
+          width: 150px;
+        }
+        .img__carrusel{
+          width: 150px;
+        }
+        .puntos{
+          width: 150px;
+        } 
+        .footer{
+            height: auto;
+            gap: 2vh;
+          }
+          .footer__div{
+            width: 60%;
+            margin-left: 5vw;
+            align-items: center;
+          }
+          .footer__figure{
+            width: 30vw;
+          }
+          .footer__h2{
+            color: white;
+            font-family: blair;
+            font-size: 1em;
+            line-height: 1.5em;
+            
+          }
+          .footer__social{
+            margin-bottom: 3vh;
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+          }
+          .social__ul{
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+          }
+          .bi{
+            width: 30px;
+          }
+
+        }
+    @media screen and (min-width: 907px) and (max-width: 1024px)  {
+      .body{
+          background-image: url(../img/fondoMovil.jpg);
+          background-attachment: fixed;
+      }
+
+      .header__figure{
+          margin-left: 30vw;
+          margin-top: 20vh;
+          width: 25em;
+        }
+        .header__nav{
+          display: none;
+        }
+        .nav__ul{
+          display: none;
+        }
+        .hamburger{
+          display: block;
+        }
+        .trabajos__main{
+          background-image: url(../img/fondo2.jpg);
+          background-attachment: fixed;
+          background-size: contain;
+        }
+        .proyectos{
+          padding-top: 15vh;
+        }
+        .proyectos__naranja{
+          top:5rem;
+           width: 10rem;
+          height: 2em;
+        }
+        .proyectos__turquesa{
+          top: 0;
+          right: 0;
+           width: 1rem;
+          height:10rem;
+        }
+        .proyectos__berenjena{
+          
+          bottom:  0.7rem;
+           width: 10rem;
+          height: 1em;
+        }
+        .proyecto__titulo{
+          
+          font-size: 2.7em;
+          
+        }
+        .proyectos__galeria{
+            padding: 7% 0;
+        }
+        .card__div{
+            width: 300px;
+            height: 300px;
+        }
+        .proyectos__card{
+          
+          width: 300px;
+          height:300px;
+          overflow: hidden;
+          margin: 10px;
+        } 
+        .proyectos__carab{
+          
+          width: 300px;
+          height: 300px;
+        } 
+        .carab__h3{
+          font-size: 1.7em;
+        }
+        .carab__enlace{
           font-size: 1em;
         }
         .modalDialog > div{
@@ -1357,5 +1121,725 @@
           .bi{
             width: 30px;
           }
+    }
+    @media screen and (min-width: 769px) and (max-width: 906px)  {
+      .body{
+          background-image: url(../img/fondoMovil.jpg);
+          background-attachment: fixed;
+      }
+
+      .header__figure{
+          margin-left: 30vw;
+          margin-top: 20vh;
+          width: 20em;
+        }
+        .header__nav{
+          display: none;
+        }
+        .nav__ul{
+          display: none;
+        }
+        .hamburger{
+          display: block;
+        }
+        .trabajos__main{
+          background-image: url(../img/fondoMovil3.jpg);
+          background-attachment: fixed;
+          background-size: contain;
+        }
+        .proyectos{
+          padding-top: 15vh;
+        }
+        .proyectos__naranja{
+          top:5rem;
+           width: 10rem;
+          height: 2em;
+        }
+        .proyectos__turquesa{
+          top: 0;
+          right: 0;
+           width: 1rem;
+          height:10rem;
+        }
+        .proyectos__berenjena{
+          
+          bottom:  0.7rem;
+           width: 10rem;
+          height: 1em;
+        }
+        .proyecto__titulo{
+          
+          font-size: 2.7em;
+          
+        }
+        .trabajo__galeria{
+            padding: 7% 0;
+        }
+        .card__div{
+            width: 300px;
+            height: 300px;
+        }
+        .proyectos__card{
+          
+          width: 300px;
+          height:300px;
+          overflow: hidden;
+          margin: 10px;
+        } 
+        .proyectos__carab{
+          
+          width: 300px;
+          height: 300px;
+        } 
+        .carab__h3{
+          font-size: 1.7em;
+        }
+        .carab__enlace{
+          font-size: 1em;
+        }
+        .modalDialog > div{
+          width:300px ;
+          height: auto;
+        }
+        .carrusel{
+          width: 300px;
+        }
+        .grande{
+          width: 150px;
+        }
+        .img__carrusel{
+          width: 150px;
+        }
+        .puntos{
+          width: 150px;
+        } 
+        .footer{
+            height: auto;
+            gap: 2vh;
+          }
+          .footer__div{
+            width: 60%;
+            margin-left: 5vw;
+            align-items: center;
+          }
+          .footer__figure{
+            width: 30vw;
+          }
+          .footer__h2{
+            color: white;
+            font-family: blair;
+            font-size: 1em;
+            line-height: 1.5em;
+            
+          }
+          .footer__social{
+            margin-bottom: 3vh;
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+          }
+          .social__ul{
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+          }
+          .bi{
+            width: 30px;
+          }
+    }
+    @media screen and (min-width:481px)  and (max-width:768px) {
+      .body{
+          background-image: url(../img/fondoMovil.jpg);
+          background-attachment: fixed;
+          background-attachment: cover;
+      }
+      
+        .header__figure{
+          margin-left: 25vw;
+          margin-top: 20vh;
+          width: 15em;
+        }
+        .header__nav{
+          display: none;
+        }
+        .nav__ul{
+          display: none;
+        }
+        .hamburger{
+          display: block;
+        }
+        .trabajos__main{
+          background-image: url(../img/fondoMovil.jpg);
+          background-attachment: fixed;
+          background-size: contain;
+          height: 100%;
+        }
+        .proyectos{
+          height: auto;
+        }
+        .proyectos__naranja{
+          top: 0.7rem;
+           width: 10rem;
+          height: 2em;
+        }
+        .proyectos__turquesa{
+          top: 0;
+          right: 0;
+           width: 1rem;
+          height:10rem;
+        }
+        .proyectos__berengena{
+          top: 0.7rem;
+           width: 10rem;
+          height: 2em;
+        }
+        .proyecto__titulo{
+          
+          font-size: 1.5em;
+          
+        }
+        .card__div{
+          
+          width: 300px;
+          height:300px;
+          overflow: hidden;
+          margin: 10px;
+        } 
+        .proyectos__carab{
+          
+          width: 300px;
+          height: 300px;
+        } 
+        .carab__h3{
+          font-size: 1.7em;
+        }
+        .carab__enlace{
+          font-size: 1em;
+        }
+        .modalDialog > div{
+          width:450px ;
+          height: auto;
+          margin: 55% auto;
+        }
+        .close{
+          width: 1.5em;
+          height: 1.5em;
+          font-size: 1.5em;
+          padding-top: 0.3em;
+        }
+        .carrusel{
+          width:100%;
+          height: 250px;
+          
+        }
+        .grande{
+          width: 100%;
+         height: 300%;
+        
+        }
+        .img__div{
+          height:calc(100%*3);
+          min-width: 60vw;
+        }
+        .img__carrusel{
+          width: 100%;
+          height: 100%;
+        }
+        .puntos{
+          width: 50%;
+          height: auto;
+          flex-flow: column nowrap;
+        } 
+        .punto{
+          width: 1.7em;
+          height: 1.7em;
+          font-size: 1.3em;
+          text-align: center;
+          padding: 0.2em;
+        }
+        .imagenes{
+          width:100%;
+          height: 250px;
+          
+        }
+        .fotos{
+          width: 100%;
+         height: 300%;
+        
+        }
+        .img__div{
+          height:calc(100%*3);
+          min-width: 60vw;
+        }
+        .img__carrusel{
+          width: 100%;
+          height: 100%;
+        }
+        .puntosDos{
+          width: 50%;
+          height: auto;
+          flex-flow: column nowrap;
+        } 
+        .puntoDos{
+          width: 1.7em;
+          height: 1.7em;
+          font-size: 1.3em;
+          text-align: center;
+          padding: 0.2em;
+        }
+        .imagenes-dos{
+          width:100%;
+          height: 250px;
+          
+        }
+        .fotos-dos{
+          width: 100%;
+         height: 300%;
+        
+        }
+        .img__div{
+          height:calc(100%*3);
+          min-width: 60vw;
+        }
+        .img__carrusel{
+          width: 100%;
+          height: 100%;
+        }
+        .puntos-tres{
+          width: 50%;
+          height: auto;
+          flex-flow: column nowrap;
+        } 
+        .punto-tres{
+          width: 1.7em;
+          height: 1.7em;
+          font-size: 1.3em;
+          text-align: center;
+          padding: 0.2em;
+        }
+        /* ------------carrusel---------- */
+        .carrusel{
+          width:100%;
+          height: 250px;
+          
+        }
+        .grande{
+          width: 50%;
+         height: 300%;
+        
+        }
+        .img__div{
+          height:calc(100%*3);
+          min-width: 60vw;
+        }
+        .img__carrusel{
+          width: 100%;
+          height: 100%;
+        }
+        .puntos{
+          width: 50%;
+          height: auto;
+          flex-flow: column nowrap;
+        } 
+        .punto{
+          width: 1.7em;
+          height: 1.7em;
+          font-size: 1.3em;
+          text-align: center;
+          padding: 0.2em;
+        }
+        .imagenes{
+          width:100%;
+          height: 250px;
+          
+        }
+        .fotos{
+          width: 100%;
+         height: 300%;
+        
+        }
+        .img__div{
+          height:calc(100%*3);
+          min-width: 60vw;
+        }
+        .img__carrusel{
+          width: 100%;
+          height: 100%;
+        }
+        .puntosDos{
+          width: 50%;
+          height: auto;
+          flex-flow: column nowrap;
+        } 
+        .puntoDos{
+          width: 1.7em;
+          height: 1.7em;
+          font-size: 1.3em;
+          text-align: center;
+          padding: 0.2em;
+        }
+        .imagenes-dos{
+          width:100%;
+          height: 250px;
+          
+        }
+        .fotos-dos{
+          width: 100%;
+         height: 300%;
+        
+        }
+        .img__div{
+          height:calc(100%*3);
+          min-width: 60vw;
+        }
+        .img__carrusel{
+          width: 100%;
+          height: 100%;
+        }
+        .puntos-tres{
+          width: 50%;
+          height: auto;
+          flex-flow: column nowrap;
+        } 
+        .punto-tres{
+          width: 1.7em;
+          height: 1.7em;
+          font-size: 1.3em;
+          text-align: center;
+          padding: 0.2em;
+        }
+        /* --------footer-------- */
+        .footer{
+            height: auto;
+            gap: 2vh;
+          }
+          .footer__div{
+            width: 60%;
+            margin-left: 5vw;
+            align-items: center;
+          }
+          .footer__figure{
+            width: 30vw;
+          }
+          .footer__h2{
+            color: white;
+            font-family: blair;
+            font-size: 1em;
+            line-height: 1.5em;
+            
+          }
+          .footer__social{
+            margin-bottom: 3vh;
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+          }
+          .social__ul{
+            width: 50vw;
+            display: flex;
+            justify-content: space-around;
+          }
+          .bi{
+            width: 30px;
+          }
+
+    }
+    @media screen and (max-width: 480px) {
+      .body{
+          background-image: url(../img/fondoMovil.jpg);
+          background-attachment: fixed;
+      }
+    
+      .trabajos__main{
+        background-image: url(../img/fondoMovil.jpg);
+        background-size: cover;
+      }
+    
+      .header__figure{
+        margin-left: 18vw;
+        margin-top: 20vh;
+        width: 15em;
+      }
+      .header__nav{
+        display: none;
+      }
+      .nav__ul{
+        display: none;
+      }
+      .hamburger{
+        display: block;
+      }
+      .trabajos__main{
+        background-image: url(../img/fondoMovil.jpg);
+        background-attachment: fixed;
+        background-size: contain;
+      }
+      .proyectos{
+        padding-top: 15vh;
+      }
+      .proyectos__naranja{
+        top:5rem;
+         width: 10rem;
+        height: 2em;
+      }
+      .proyectos__turquesa{
+        top: 0;
+        right: 0;
+         width: 1rem;
+        height:10rem;
+      }
+      .proyectos__berenjena{
+        
+        bottom:  0.7rem;
+         width: 10rem;
+        height: 1em;
+      }
+      .proyecto__titulo{
+        
+        font-size: 1.5em;
+        
+      }
+      .proyectos__galeria{
+          padding: 7% 0;
+      }
+      .card__div{
+          width: 300px;
+          height: 300px;
+      }
+      .proyectos__card{
+        
+        width: 300px;
+        height:300px;
+        overflow: hidden;
+        margin: 10px;
+      } 
+      .proyectos__carab{
+        
+        width: 300px;
+        height: 300px;
+      } 
+      .carab__h3{
+        font-size: 1.7em;
+      }
+      .carab__enlace{
+        font-size: 1em;
+      }
+      .modalDialog > div{
+        width:300px ;
+        height: auto;
+      }
+      .carrusel{
+        width:100%;
+        height: 250px;
+        
+      }
+      .grande{
+        width: 100%;
+       height: 300%;
       
       }
+      .img__div{
+        height:calc(100%*3);
+        min-width: 60vw;
+      }
+      .img__carrusel{
+        width: 100%;
+        height: 100%;
+      }
+      .puntos{
+        width: 50%;
+        height: auto;
+        flex-flow: column nowrap;
+      } 
+      .punto{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0.2em;
+      }
+      .imagenes{
+        width:100%;
+        height: 250px;
+        
+      }
+      .fotos{
+        width: 100%;
+       height: 300%;
+      
+      }
+      .img__div{
+        height:calc(100%*3);
+        min-width: 60vw;
+      }
+      .img__carrusel{
+        width: 100%;
+        height: 100%;
+      }
+      .puntosDos{
+        width: 50%;
+        height: auto;
+        flex-flow: column nowrap;
+      } 
+      .puntoDos{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0.2em;
+      }
+      .imagenes-dos{
+        width:100%;
+        height: 250px;
+        
+      }
+      .fotos-dos{
+        width: 100%;
+       height: 300%;
+      
+      }
+      .img__div{
+        height:calc(100%*3);
+        min-width: 60vw;
+      }
+      .img__carrusel{
+        width: 100%;
+        height: 100%;
+      }
+      .puntos-tres{
+        width: 50%;
+        height: auto;
+        flex-flow: column nowrap;
+      } 
+      .punto-tres{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0.2em;
+      }
+      .imagenes-tres{
+        width:100%;
+        height: 250px;
+        
+      }
+      .fotos-tres{
+        width: 100%;
+       height: 300%;
+      
+      }
+      .img__div{
+        height:calc(100%*3);
+        min-width: 60vw;
+      }
+      .img__carrusel{
+        width: 100%;
+        height: 100%;
+      }
+      .puntos-cuatro{
+        width: 50%;
+        height: auto;
+        flex-flow: column nowrap;
+      } 
+      .punto-cuatro{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0.2em;
+      }
+      .imagenes-cuatro{
+        width:100%;
+        height: 250px;
+        
+      }
+      .fotos-cuatro{
+        width: 100%;
+       height: 300%;
+      
+      }
+      .img__div{
+        height:calc(100%*3);
+        min-width: 60vw;
+      }
+      .img__carrusel{
+        width: 100%;
+        height: 100%;
+      }
+      .puntos-cinco{
+        width: 50%;
+        height: auto;
+        flex-flow: column nowrap;
+      } 
+      .punto-cinco{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0.2em;
+      }
+      .imagenes-cinco{
+        width:100%;
+        height: 250px;
+        
+      }
+      .fotos-cinco{
+        width: 100%;
+       height: 300%;
+      
+      }
+      .img__div{
+        height:calc(100%*3);
+        min-width: 60vw;
+      }
+      .img__carrusel{
+        width: 100%;
+      height: 100%;
+      }
+      .puntos-seis{
+        width: 50%;
+        height: auto;
+        flex-flow: column nowrap;
+      } 
+      .punto-seis{
+        width: 1.7em;
+        height: 1.7em;
+        font-size: 1.3em;
+        text-align: center;
+        padding: 0.2em;
+      }
+      .footer{
+          height: auto;
+          gap: 2vh;
+        }
+        .footer__div{
+          width: 60%;
+          margin-left: 5vw;
+          align-items: center;
+        }
+        .footer__figure{
+          width: 30vw;
+        }
+        .footer__h2{
+          color: white;
+          font-family: blair;
+          font-size: 1em;
+          line-height: 1.5em;
+          
+        }
+        .footer__social{
+          margin-bottom: 3vh;
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .social__ul{
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .bi{
+          width: 30px;
+        }
+    
+    }

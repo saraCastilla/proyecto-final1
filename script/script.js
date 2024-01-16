@@ -177,42 +177,95 @@ function slides(){
 }
 
 
-let grande = document.querySelector(".grande")
-let punto = document.querySelectorAll(".punto")
 
 
+// convirtiendo las card en una array de objetos para poder hacer un map más tarde
+const grande    = document.querySelector('.grande')
+const punto     = document.querySelectorAll('.punto')
 
-punto.forEach((cadaPunto , i) => {
-    punto[i].addEventListener("click",()  =>{
-        let posicion = i 
-        let operacion = posicion * - 33.3
+// Cuando CLICK en punto
+    // Saber la posición de ese punto
+    // Aplicar un transform translateX al grande
+    // QUITAR la clase activo de TODOS puntos
+    // AÑADIR la clase activo al punto que hemos hecho CLICK
 
-        grande.style.transform = `translateY(${operacion}%)`
+// Recorrer TODOS los punto
+punto.forEach( ( cadaPunto , i )=> {
+    // Asignamos un CLICK a cadaPunto
+    punto[i].addEventListener('click',()=>{
 
-        punto.forEach((cadaPunto , i) => {
-            punto[i].classList.remove( "activo")
+        // Guardar la posición de ese PUNTO
+        let posicion  = i
+        // Calculando el espacio que debe DESPLAZARSE el GRANDE
+        let operacion = posicion * -33.3
 
+        // MOVEMOS el grand
+        grande.style.transform = `translateY(${ operacion }%)`
+
+        // Recorremos TODOS los punto
+        punto.forEach( ( cadaPunto , i )=>{
+            // Quitamos la clase ACTIVO a TODOS los punto
+            punto[i].classList.remove('activo')
         })
-        punto[i].classList.add("activo")
+        // Añadir la clase activo en el punto que hemos hecho CLICK
+        punto[i].classList.add('activo')
+
     })
-    
-    
+})
+let fotos = document.querySelector(".fotos")
+let puntoDos = document.querySelectorAll(".puntoDos")
+
+puntoDos.forEach((cadaPuntoDos , i) => {
+  puntoDos[i].addEventListener("click",()  =>{
+      let posicion = i 
+      let operacion = posicion * - 33.3
+
+      fotos.style.transform = `translateY(${operacion}%)`
+
+      puntoDos.forEach((cadaPuntoDos , i) => {
+          puntoDos[i].classList.remove( "activo")
+
+      })
+      puntoDos[i].classList.add("activo")
+  })
+  
+  
 });
+let fotosDos = document.querySelector(".fotos-dos")
+let puntoTres = document.querySelectorAll(".punto-tres")
+
+puntoTres.forEach((cadaPuntoDos , i) => {
+  puntoTres[i].addEventListener("click",()  =>{
+      let posicion = i 
+      let operacion = posicion * - 33.3
+
+      fotosDos.style.transform = `translateY(${operacion}%)`
+
+      puntoTres.forEach((cadaPuntoTres , i) => {
+          puntoTres[i].classList.remove( "activo")
+
+      })
+      puntoTres[i].classList.add("activo")
+  })
+  
+  
+});
+
 
 // convirtiendo las card en una array de objetos para poder hacer un map más tarde
 let cards = [
     {
-        img: "../img/galeria/retail/retail1.jpg",
+        img: "./img/galeria/retail/retail1.jpg",
         h3: "RETAIL",
-        
+        modal:"#openModal"
     },{
-        img: "../img/galeria/eventos/evento.jpg",
+        img: "./img/galeria/eventos/evento.jpg",
         h3: "EVENTOS",
-       
+        modal:"#openModal1"
     },{
-        img: "../img/galeria/digital/inversis.jpg",
+        img: "./img/galeria/digital/inversis(1).jpg",
         h3: "DIGITAL",
-        
+        modal:"#openModal2"
     }
 ]
 
@@ -229,35 +282,9 @@ let cards = [
     </div>
     <div class="proyectos__carab">
         <h3 class="carab__h3">${card.h3}</h3>
-        <a href="#openModal" class="carab__enlace">ver más</a>      
+        <a href="${card.modal}" class="carab__enlace">ver más</a>      
 
     </div>
-</div>
-<div id="openModal" class="modalDialog">
-<div class="modal">
-    <a href="#close" title="Close" class="close">X</a>
-    <div id="carrusel" class="carrusel">
-        <div class="grande">
-            <div class="img__div">
-                <img src="./img/galeria/retail/retail1.jpg" alt="img" class="img__carrusel">
-            </div>
-            <div class="img__div">
-                <img src="./img/galeria/retail/retail2.jpg" alt="img" class="img__carrusel">
-            </div>
-
-             <div class="img__div">
-                <img src="./img/galeria/retail/retail3.jpg" alt="img" class="img__carrusel">
-            </div>
-        </div>
-        <ul class="puntos">
-            <li class="punto activo">1</li>
-            <li class="punto">2</li>
-            <li class="punto">3</li>
-        </ul>
-
-    </div>
-
-</div>
 </div>`)
     
 
@@ -266,6 +293,56 @@ let cards = [
 
  });
  div.innerHTML = card.join(" ")
+
+//  let fotos = [
+//     {
+//         imgUna: "../img/galeria/RETAIL/RETAIL_11.jpg",
+//         imgDos: "../img/galeria/RETAIL/RETAIL_31.jpg",
+//         imgTres: "../img/galeria/RETAIL/RETAIL_33.jpg",
+//     },{
+//         imgUna: "../img/galeria/EVENTOS/EVENTO_21.jpg",
+//         imgDos: "../img/galeria/EVENTOS/EVENTO_42.jpg",
+//         imgTres: "../img/galeria/EVENTOS/EVENTO_8.jpg",
+        
+//     },{
+//         imgUna: "../img/galeria/DIGITAL/ejemplo_api-01.jpg",
+//         imgDos: "../img/galeria/DIGITAL/INVERSIS.jpg",
+//         imgTres: "../img/galeria/DIGITAL/MERCEDES.jpg",
+        
+//     }
+// ]
+// let carrusel = document.getElementById("carrusel")
+
+// const foto = fotos.map((foto,index) =>{
+//     return(` 
+//     <div class="grande">
+//         <div class="img__div">
+//             <img src="${foto.imgUna}" alt="img" class="img__carrusel">
+//         </div>
+//         <div class="img__div">
+//             <img src="${foto.imgDos}" alt="img" class="img__carrusel">
+//         </div>
+
+//          <div class="img__div">
+//             <img src="${foto.imgTres}" alt="img" class="img__carrusel">
+//         </div>
+//     </div>
+//     <ul class="puntos">
+//         <li class="punto activo">1</li>
+//         <li class="punto">2</li>
+//         <li class="punto">3</li>
+//     </ul>
+
+// `)
+    
+
+
+
+
+//  });
+//  carrusel.innerHTML = foto.join(" ")
+
+
 
 //  let fotos = [
 //     {
