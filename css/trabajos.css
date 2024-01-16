@@ -525,16 +525,7 @@
         background-color: var(--naraja);
         opacity: 0.8;
       }
-      /* .proyectos__verde{
-        position: absolute;
-        bottom:  50px;
-        left: 250px;
-        width: 600px;
-        height: 100px;
-        background-color: var(--verde);
-        opacity: .8;
-      
-      } */
+     
       .trabajo__turquesa{
         position: absolute;
         top: 0;
@@ -607,7 +598,636 @@
       .bi{
         fill: white;
       }
+      @media screen and (min-width:1381px) and (max-width:1919px) {
+        .body{
+            background-image: url(../img/fondoMovil.jpg);
+            background-attachment: fixed;
+        }
+
+        .header__figure{
+            margin-left: 35vw;
+            margin-top: 20vh;
+            width: 25em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .trabajos__main{
+            background-image: url(../img/fondo2.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+          }
+          .trabajo{
+            padding-top: 15vh;
+          }
+          .trabajo__naranja{
+            top:5rem;
+             width: 10rem;
+            height: 2em;
+          }
+          .trabajo__turquesa{
+            top: 0;
+            right: 0;
+             width: 1rem;
+            height:10rem;
+          }
+          .trabajo__berenjena{
+            
+            bottom:  0.7rem;
+             width: 10rem;
+            height: 1em;
+          }
+          .trabajo__titulo{
+            
+            font-size: 2.7em;
+            
+          }
+          .trabajo__galeria{
+              padding: 7% 0;
+          }
+          /* .cardA__div{
+              width: 300px;
+              height: 300px;
+          }
+          .trabajo__card{
+            
+            width: 300px;
+            height:300px;
+            overflow: hidden;
+            margin: 10px;
+          } 
+          .trabajo__carab{
+            
+            width: 300px;
+            height: 300px;
+          } 
+          .trabajo__h3{
+            font-size: 1.7em;
+          }
+          .trabajo__enlace{
+            font-size: 1em; */
+          }
+          .modalDialog > div{
+            width:300px ;
+            height: auto;
+          }
+          .carrusel{
+            width: 300px;
+          }
+          .grande{
+            width: 150px;
+          }
+          .img__carrusel{
+            width: 150px;
+          }
+          .puntos{
+            width: 150px;
+          } 
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              margin-bottom: 3vh;
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+
+
       
+      @media screen and (min-width:1025px) and (max-width: 1380px)  {
+        .body{
+            background-image: url(../img/fondoMovil.jpg);
+            background-attachment: fixed;
+        }
+
+        .header__figure{
+            margin-left: 35vw;
+            margin-top: 20vh;
+            width: 25em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .trabajos__main{
+            background-image: url(../img/fondo2.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+          }
+          .trabajo{
+            padding-top: 15vh;
+          }
+          .trabajo__naranja{
+            top:5rem;
+             width: 10rem;
+            height: 2em;
+          }
+          .trabajo__turquesa{
+            top: 0;
+            right: 0;
+             width: 1rem;
+            height:10rem;
+          }
+          .trabajo__berenjena{
+            
+            bottom:  0.7rem;
+             width: 10rem;
+            height: 1em;
+          }
+          .trabajo__titulo{
+            
+            font-size: 2.7em;
+            
+          }
+          .trabajo__galeria{
+              padding: 7% 0;
+          }
+          /* .cardA__div{
+              width: 300px;
+              height: 300px;
+          }
+          .trabajo__card{
+            
+            width: 300px;
+            height:300px;
+            overflow: hidden;
+            margin: 10px;
+          } 
+          .trabajo__carab{
+            
+            width: 300px;
+            height: 300px;
+          } 
+          .trabajo__h3{
+            font-size: 1.7em;
+          }
+          .trabajo__enlace{
+            font-size: 1em; */
+          }
+          .modalDialog > div{
+            width:300px ;
+            height: auto;
+          }
+          .carrusel{
+            width: 300px;
+          }
+          .grande{
+            width: 150px;
+          }
+          .img__carrusel{
+            width: 150px;
+          }
+          .puntos{
+            width: 150px;
+          } 
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              margin-bottom: 3vh;
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+
+      
+      @media screen and (min-width: 907px) and (max-width: 1024px)  {
+        .body{
+            background-image: url(../img/fondoMovil.jpg);
+            background-attachment: fixed;
+        }
+
+        .header__figure{
+            margin-left: 30vw;
+            margin-top: 20vh;
+            width: 25em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .trabajos__main{
+            background-image: url(../img/fondo2.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+          }
+          .trabajo{
+            padding-top: 15vh;
+          }
+          .trabajo__naranja{
+            top:5rem;
+             width: 10rem;
+            height: 2em;
+          }
+          .trabajo__turquesa{
+            top: 0;
+            right: 0;
+             width: 1rem;
+            height:10rem;
+          }
+          .trabajo__berenjena{
+            
+            bottom:  0.7rem;
+             width: 10rem;
+            height: 1em;
+          }
+          .trabajo__titulo{
+            
+            font-size: 2.7em;
+            
+          }
+          .trabajo__galeria{
+              padding: 7% 0;
+          }
+          .cardA__div{
+              width: 300px;
+              height: 300px;
+          }
+          .trabajo__card{
+            
+            width: 300px;
+            height:300px;
+            overflow: hidden;
+            margin: 10px;
+          } 
+          .trabajo__carab{
+            
+            width: 300px;
+            height: 300px;
+          } 
+          .trabajo__h3{
+            font-size: 1.7em;
+          }
+          .trabajo__enlace{
+            font-size: 1em;
+          }
+          .modalDialog > div{
+            width:300px ;
+            height: auto;
+          }
+          .carrusel{
+            width: 300px;
+          }
+          .grande{
+            width: 150px;
+          }
+          .img__carrusel{
+            width: 150px;
+          }
+          .puntos{
+            width: 150px;
+          } 
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              margin-bottom: 3vh;
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+      }
+      @media screen and (min-width: 769px) and (max-width: 906px)  {
+        .body{
+            background-image: url(../img/fondoMovil.jpg);
+            background-attachment: fixed;
+        }
+
+        .header__figure{
+            margin-left: 30vw;
+            margin-top: 20vh;
+            width: 20em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .trabajos__main{
+            background-image: url(../img/fondoMovil3.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+          }
+          .trabajo{
+            padding-top: 15vh;
+          }
+          .trabajo__naranja{
+            top:5rem;
+             width: 10rem;
+            height: 2em;
+          }
+          .trabajo__turquesa{
+            top: 0;
+            right: 0;
+             width: 1rem;
+            height:10rem;
+          }
+          .trabajo__berenjena{
+            
+            bottom:  0.7rem;
+             width: 10rem;
+            height: 1em;
+          }
+          .trabajo__titulo{
+            
+            font-size: 2.7em;
+            
+          }
+          .trabajo__galeria{
+              padding: 7% 0;
+          }
+          .cardA__div{
+              width: 300px;
+              height: 300px;
+          }
+          .trabajo__card{
+            
+            width: 300px;
+            height:300px;
+            overflow: hidden;
+            margin: 10px;
+          } 
+          .trabajo__carab{
+            
+            width: 300px;
+            height: 300px;
+          } 
+          .trabajo__h3{
+            font-size: 1.7em;
+          }
+          .trabajo__enlace{
+            font-size: 1em;
+          }
+          .modalDialog > div{
+            width:300px ;
+            height: auto;
+          }
+          .carrusel{
+            width: 300px;
+          }
+          .grande{
+            width: 150px;
+          }
+          .img__carrusel{
+            width: 150px;
+          }
+          .puntos{
+            width: 150px;
+          } 
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              margin-bottom: 3vh;
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+      }
+      @media screen and (min-width:481px)  and (max-width:768px) {
+        .body{
+            background-image: url(../img/fondoMovil.jpg);
+            background-attachment: fixed;
+            background-attachment: cover;
+        }
+        
+          .header__figure{
+            margin-left: 25vw;
+            margin-top: 20vh;
+            width: 15em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .trabajos__main{
+            background-image: url(../img/fondoMovil3.jpg);
+            background-attachment: fixed;
+            background-size: contain;
+          }
+          .trabajo{
+            padding-top: 15vh;
+          }
+          .trabajo__naranja{
+            top:5rem;
+             width: 10rem;
+            height: 2em;
+          }
+          .trabajo__turquesa{
+            top: 0;
+            right: 0;
+             width: 1rem;
+            height:10rem;
+          }
+          .trabajo__berenjena{
+            
+            bottom:  0.7rem;
+             width: 10rem;
+            height: 1em;
+          }
+          .trabajo__titulo{
+            
+            font-size: 1.5em;
+            
+          }
+          .trabajo__galeria{
+              padding: 7% 0;
+          }
+          .cardA__div{
+              width: 300px;
+              height: 300px;
+          }
+          .trabajo__card{
+            
+            width: 300px;
+            height:300px;
+            overflow: hidden;
+            margin: 10px;
+          } 
+          .trabajo__carab{
+            
+            width: 300px;
+            height: 300px;
+          } 
+          .trabajo__h3{
+            font-size: 1.7em;
+          }
+          .trabajo__enlace{
+            font-size: 1em;
+          }
+          .modalDialog > div{
+            width:300px ;
+            height: auto;
+          }
+          .carrusel{
+            width: 300px;
+          }
+          .grande{
+            width: 150px;
+          }
+          .img__carrusel{
+            width: 150px;
+          }
+          .puntos{
+            width: 150px;
+          } 
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              margin-bottom: 3vh;
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+
+      }
       @media screen and (max-width: 480px) {
         .body{
             background-image: url(../img/fondoMovil.jpg);
@@ -616,11 +1236,12 @@
       
         .trabajos__main{
           background-image: url(../img/fondoMovil.jpg);
+          background-size: cover;
         }
       
         .header__figure{
           margin-left: 18vw;
-          margin-top: 25vh;
+          margin-top: 20vh;
           width: 15em;
         }
         .header__nav{

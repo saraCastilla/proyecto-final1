@@ -599,7 +599,905 @@
     fill: white;
   }
   /* --------resposive---------- */
-  @media screen  and (max-width: 480px) {
+  @media screen and (min-width:1381px) and (max-width:1919px) {
+    .header__nav{
+        width: 60vw;
+        height: 20vh;  
+      }
+      .main{
+        width: 100vw;
+        height: auto;
+       
+         background-image: url(../img/eventos.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2vh;
+      }
+      .main__div{
+        
+        background-image: url(../img/menuMovil.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 400px;
+        background-position: bottom;
+        background-size: cover;
+       
+      }
+      .quehacemos{
+        padding: 0;
+        gap: 3rem;
+      }
+      .quehacemos__div{
+        width: 90%;
+        margin: 5%;
+      }
+      .quehacemos__primera{
+        width: 22rem;
+      }
+      .quehacemos__segunda{
+        
+        width: 22rem;
+      }
+      .quehacemos__tercera{
+        width: 22rem;
+      }
+      .quehacemos__h4{
+        font-size: 2.5em;
+      }
+      .comotrabajamos{
+        padding: 0;
+      }
+      .comotrabajamos__div{
+        width: 90%;
+        margin: 5%;
+      }
+      .comotrabajamos__primera{
+        width: 34rem;
+      }
+    .comotrabajamos__segunda{
+        width: 34rem;
+    }
+    .comotrabajamos__h4{
+        font-size: 2.7em;
+    }
+    .comotrabajamos__enlace{
+        padding-top: 5%;
+    }
+
+
+  }
+  @media screen and (min-width:1025px) and (max-width: 1380px)  {
+    .header__nav{
+        width: 60vw;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0;
+        
+        
+      }
+      .nav__ul{
+        width: 70vw;
+        padding-right: 5vw;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+      
+        flex-wrap: wrap;
+       
+      }
+      .main{
+        width: 100vw;
+        height: auto;
+       
+         background-image: url(../img/eventos.jpg);
+        background-repeat:no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5vh;
+      }
+    .main__div{
+        
+        background-image: url(../img/menuMovil.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 300px;
+        background-position: bottom;
+        background-size: cover;
+       
+      }
+      .abaut{
+        margin-top: 20vh;
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .abaut__div{
+        margin-top: 10vh;
+        width: 90vw;
+        padding: 3%;
+        background-color:rgba(255,255,255,.7) ;
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  white;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        animation: caer1 1.5s; 
+        animation-iteration-count: 1;
+        animation-timing-function: linear;
+      
+      }
+      
+     
+      
+      .abaut__h1{
+        color: white;
+        text-align: center;
+        font-family:monserrat;
+        font-size: 2.5em;
+      }
+      .abaut__parrafo{
+        color: var(--azul);
+        font-family:montserrat;
+        font-size: 1.5em;
+        font-weight: 500;
+        line-height: 2;
+      
+      }
+      .abaut__h2{
+        text-align: left;
+        color:var(--azul);
+        font-family: 'Poppins', sans-serif;;
+        font-size: 3em;
+        line-height: 1;
+      }
+      .quehacemos{
+        margin-top: 20vh;
+        width: 100vw;
+        padding: 2%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+      
+      }
+      .quehacemos__h2{
+        color: white;
+        text-align: center;
+        padding-bottom: 5vh;
+        font-family:monserrat;
+        font-size: 2.5em;
+        padding-top: 10vh;
+      }
+      .quehacemos__div{
+       
+        display: flex;
+        padding: 2%;
+        flex-wrap: wrap;
+        animation-fill-mode: none;
+        gap: 2rem;
+      
+      }
+      .quehacemos__primera{
+        width: 90%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(229,90,123,.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--rosa);
+      }
+      .quehacemos__segunda{
+        width: 90%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(92,188,198,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--turquesa);
+      }
+      .quehacemos__tercera{
+        width: 90%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(154,52,79,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--berengena);
+      }
+      
+      
+      .quehacemos__h4{
+        width: 15vw;
+        text-align: letf;
+        color: white;
+        font-family: flama;
+        font-size: 2.5em;
+        line-height: 1;
+      }
+      .quehacemos__parrafo{
+        color: white;
+        font-size: 1.5em;
+      }
+      .comotrabajamos{
+       
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        
+        
+      }
+      .comotrabajamos__h2{
+        color: white;
+        text-align: center;
+        padding-top: 10vh;
+        font-family:monserrat;
+        font-size: 3em;
+        padding-bottom: 2em;
+      }
+      .comotrabajamos__div{
+        width: 96vw;
+        padding: 2%;
+        display: flex;
+        gap: 2rem;
+        overflow: hiden;
+        flex-wrap: wrap;
+        animation-fill-mode: none;
+      }
+     
+      .comotrabajamos__primera{
+        width: 90%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 3rem;
+        background-color:  rgb(246,140,104,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--naraja);
+      }
+      .comotrabajamos__h3{
+        height: auto;
+        padding-top: 5%;
+        color: white;
+        font-family:var(--tipo-secundaria);
+        font-size: 5em;
+      }
+      .comotrabajamos__h4{
+        width: 15vw;
+        text-align: letf;
+        color: white;
+        font-family: flama;
+        font-size: 2.5em;
+        line-height: 1;
+      }
+      .comotrabajamos__parrafo{
+       
+        font-size: 1.5em;
+      }
+      .comotrabajamos__segunda{
+        width: 90%;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color:  rgb(0,101,128,0.4);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--azul);
+      }
+      
+      .comotrabajamos__enlace{
+        color: white;
+        text-align: center;
+        font-family:var(--tipo-tercera);
+        font-size: 2.7em;
+        padding-top: 10vh;
+      }
+      .comotrabajamos__enlace:hover{
+        color: var(--rosa);
+      }
+      
+      
+
+  }
+  @media screen and (min-width: 907px) and (max-width: 1024px)  {
+    .main{
+        background-image: url(../img/eventosMovil.jpg);
+      background-repeat:no-repeat;
+     
+      background-attachment: fixed; 
+      background-size: cover;
+     
+      padding-bottom: 0;
+    }
+    .main__div{
+        
+        background-image: url(../img/menuMovil.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        height: 300px;
+        background-position: bottom;
+       
+      }
+    
+    .header__figure{
+        width: 18vw;
+        margin-left: 5vw;
+       
+      }
+      .header__nav{
+        width: 60vw;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0;
+        
+        
+      }
+      .nav__ul{
+        width: 60vw;
+        padding-right: 5vw;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+      
+        flex-wrap: wrap;
+       
+      }
+      
+      
+      .nav__li:hover{
+        color: var(--naraja);
+        
+      }
+      .nav__li .active{
+        color: var(--naraja);
+      }
+      .nav__li{ 
+        margin: 0.5em;
+        text-align: center; 
+        font-size: 1.5em; 
+        font-family:flama;
+        font-weight: 700;
+        color: var(--azul);
+        
+      }
+      .abaut{
+        margin-top: 5vh;
+      }
+      .abaut__h1{
+        font-size:2em ;
+      }
+      .abaut__parrafo{
+          font-size: 1em;
+      }
+        
+      .quehacemos{
+        margin-top: 5vh;
+        padding: 2vw;
+      }
+      .quehacemos__div{
+        padding: 2vw;
+      }
+      .quehacemos__h2{
+        font-size: 2em;
+        padding-top: 5vh;
+      }
+      .quehacemos__primera{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(229,90,123,.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--rosa);
+      }
+      .quehacemos__segunda{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(92,188,198,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--turquesa);
+      }
+      .quehacemos__tercera{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(154,52,79,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--berengena);
+      }
+      
+      .comotrabajamos__h2{
+        font-size: 1.7em;
+        padding-top: 5vh;
+      }
+      .quehacemos__h4{
+          width: 45vw;
+       
+        font-size: 2em;
+        
+      }
+      .quehacemos__parrafo{
+       
+        font-size: 1.3em;
+      }
+      .comotrabajamos{
+        height: auto;
+        padding: 5vw;
+        
+      }
+      .comotrabajamos__div{
+          padding: 0;
+      }
+      .comotrabajamos__h4{
+        width: 60vw;
+        font-size: 2em;
+        
+      }
+      .comotrabajamos__parrafo{
+        
+        font-size: 1.1em;
+      }
+      .comotrabajamos__enlace{
+        font-size: 1em;
+        padding-bottom: 5vh;
+      }
+      .comotrabajamos__primera{
+        width:90vw ;
+      }
+      .comotrabajamos__segunda{
+        width:90vw ;
+      }
+      .footer{
+          height: auto;
+          gap: 2vh;
+        }
+        .footer__div{
+          width: 60%;
+          margin-left: 5vw;
+          align-items: center;
+          margin-top: 2vh;
+        }
+        .footer__figure{
+          width: 30vw;
+        }
+        .footer__h2{
+          color: white;
+          font-family: blair;
+          font-size: 1em;
+          line-height: 1.5em;
+          
+        }
+        .footer__social{
+          margin-bottom: 3vh;
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .social__ul{
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .bi{
+          width: 30px;
+        }
+
+    
+  }
+
+  
+  @media screen and (min-width: 769px) and (max-width: 906px)  {
+  
+    /* CSS */
+    .main{
+        background-image: url(../img/eventosMovil.jpg);
+      background-repeat:no-repeat;
+      
+      background-attachment: fixed; 
+      background-size: cover;
+     
+      padding-bottom: 0;
+    }
+    .main__div{
+        height: 300px;
+        background-image: url(../img/menuMovil.png);
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: bottom;
+       
+      }
+    
+    .header__figure{
+        width: 18vw;
+        margin-left: 5vw;
+       
+      }
+      .header__nav{
+        width: 60vw;
+        height: 20vh;
+        display: flex;
+        justify-content: space-between;
+        margin-right: 0;
+        
+        
+      }
+      .nav__ul{
+        width: 60vw;
+        padding-right: 5vw;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+      
+        flex-wrap: wrap;
+       
+      }
+      
+      
+      .nav__li:hover{
+        color: var(--naraja);
+        
+      }
+      .nav__li .active{
+        color: var(--naraja);
+      }
+      .nav__li{ 
+        margin: 0.5em;
+        text-align: center; 
+        font-size: 1.5em; 
+        font-family:flama;
+        font-weight: 700;
+        color: var(--azul);
+        
+      }
+      .abaut{
+        margin-top: 5vh;
+      }
+      .abaut__h1{
+        font-size:2em ;
+      }
+      .abaut__parrafo{
+          font-size: 1em;
+      }
+        
+      .quehacemos{
+        margin-top: 5vh;
+      }
+      .quehacemos__h2{
+        font-size: 2em;
+        padding-top: 5vh;
+      }
+      .quehacemos__primera{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(229,90,123,.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--rosa);
+      }
+      .quehacemos__segunda{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(92,188,198,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--turquesa);
+      }
+      .quehacemos__tercera{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(154,52,79,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--berengena);
+      }
+      
+      .comotrabajamos__h2{
+        font-size: 1.7em;
+        padding-top: 5vh;
+      }
+      .quehacemos__h4{
+          width: 45vw;
+       
+        font-size: 2em;
+        
+      }
+      .quehacemos__parrafo{
+       
+        font-size: 1.3em;
+      }
+      .comotrabajamos{
+        height: auto;
+        padding: 0;
+      
+      }
+      .comotrabajamos__div{
+          padding: 5vh;
+      }
+      .comotrabajamos__h4{
+        width: 60vw;
+        font-size: 2em;
+        
+      }
+      .comotrabajamos__parrafo{
+        
+        font-size: 1.1em;
+      }
+      .comotrabajamos__enlace{
+        font-size: 1em;
+        padding-bottom: 5vh;
+      }
+      .comotrabajamos__primera{
+        width:90vw ;
+      }
+      .comotrabajamos__segunda{
+        width:90vw ;
+      }
+      .footer{
+          height: auto;
+          gap: 2vh;
+        }
+        .footer__div{
+          width: 60%;
+          margin-left: 5vw;
+          align-items: center;
+          margin-top: 2vh;
+        }
+        .footer__figure{
+          width: 30vw;
+        }
+        .footer__h2{
+          color: white;
+          font-family: blair;
+          font-size: 1em;
+          line-height: 1.5em;
+          
+        }
+        .footer__social{
+          margin-bottom: 3vh;
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .social__ul{
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .bi{
+          width: 30px;
+        }
+
+    
+  }
+  @media screen and (min-width:481px)  and (max-width:768px) {
+    .main{
+        background-image: url(../img/eventosMovil3.jpg);
+      background-repeat:no-repeat;
+     
+      background-attachment: fixed; 
+      background-size: cover;
+     
+      padding-bottom: 0;
+    }
+    .main__div{
+        height: 200px;
+        background-image:url(../img/menuMovil.png) ;
+        margin-top: 0;
+        background-position: bottom;
+      }
+    .header__figure{
+        margin-left: 25vw;
+        margin-top: 2vh;
+        width: 15em;
+      }
+      .header__nav{
+        display: none;
+      }
+      .nav__ul{
+        display: none;
+      }
+      .hamburger{
+        display: block;
+      }
+      .abaut{
+        width: 90%;
+        margin-top: 5vh;
+        padding: 2%;
+      }
+      .abaut__div{
+        padding: 2vw;
+      }
+      .abaut__h1{
+        font-size:2em ;
+      }
+      .abaut__parrafo{
+          font-size: 1em;
+      }
+        
+      .quehacemos{
+        margin-top: 5vh;
+        padding: 5%;
+      }
+      .quehacemos__div{
+        width: 90%;
+        padding: 2%;
+
+      }
+      
+      .quehacemos__h2{
+        font-size: 1.7em;
+        padding-top: 5vh;
+      }
+      .comotrabajamos__h2{
+        font-size: 1.7em;
+        padding-top: 5vh;
+      }
+      .quehacemos__h4{
+          width: 45vw;
+       
+        font-size: 1.3em;
+        
+      }
+      .quehacemos__parrafo{
+       
+        font-size: 1.1em;
+      }
+      .quehacemos__primera{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(229,90,123,.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--rosa);
+      }
+      .quehacemos__segunda{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(92,188,198,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--turquesa);
+      }
+      .quehacemos__tercera{
+        width: 90vw;
+        padding: 3%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 2rem;
+        background-color:  rgba(154,52,79,0.7);
+        backdrop-filter: blur 7px;
+        border-radius: 8px;
+        border: 1px solid  var(--berengena);
+      }
+      .comotrabajamos{
+        height: auto;
+        padding: 0;
+      
+      }
+      .comotrabajamos__div{
+        width: 90%;
+          padding: 5vh;
+      }
+      .comotrabajamos__h4{
+        width: 60vw;
+        font-size: 1.3em;
+        
+      }
+      .comotrabajamos__parrafo{
+        
+        font-size: 1.1em;
+      }
+      .comotrabajamos__enlace{
+        font-size: 1em;
+        padding-bottom: 5vh;
+      }
+      .comotrabajamos__primera{
+        width:90vw;
+      }
+      .comotrabajamos__segunda{
+        width:90vw ;
+      }
+      .footer{
+          height: auto;
+          gap: 2vh;
+        }
+        .footer__div{
+          width: 60%;
+          margin-left: 5vw;
+          align-items: center;
+          margin-top: 2vh;
+        }
+        .footer__figure{
+          width: 30vw;
+        }
+        .footer__h2{
+          color: white;
+          font-family: blair;
+          font-size: 1em;
+          line-height: 1.5em;
+          
+        }
+        .footer__social{
+          margin-bottom: 3vh;
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .social__ul{
+          width: 50vw;
+          display: flex;
+          justify-content: space-around;
+        }
+        .bi{
+          width: 30px;
+        }
+
+
+
+
+
+
+
+
+}
+  @media screen and (max-width: 480px) {
    
   
     .main{
@@ -612,13 +1510,14 @@
       padding-bottom: 0;
     }
     .main__div{
-      height: 300px;
+      height: 200px;
       background-image:url(../img/menuMovil.png) ;
+      background-position: bottom;
     }
     .header__figure{
-      margin-left: 18vw;
-      margin-top: 25vh;
-      width: 15em;
+      margin-left: 25vw;
+      margin-top: 10vh;
+      width: 10em;
     }
     .header__nav{
       display: none;
@@ -632,6 +1531,9 @@
     .abaut{
       margin-top: 5vh;
     }
+    .abaut__div{
+        width: 80%;
+    }
     .abaut__h1{
       font-size:2em ;
     }
@@ -641,6 +1543,20 @@
       
     .quehacemos{
       margin-top: 5vh;
+      width: 90%;
+      padding-left: 5%;
+    }
+    .quehacemos__div{
+        padding: 3%;
+    }
+    .quehacemos__primera{
+        width: 80%;
+    }
+    .quehacemos__segunda{
+        width: 80%;
+    }
+    .quehacemos__tercera{
+        width: 80%;
     }
     .quehacemos__h2{
       font-size: 1.7em;
@@ -682,10 +1598,10 @@
       padding-bottom: 5vh;
     }
     .comotrabajamos__primera{
-      width:35rem ;
+      width:90% ;
     }
     .comotrabajamos__segunda{
-      width:35rem ;
+      width:90% ;
     }
     .footer{
         height: auto;
@@ -722,4 +1638,4 @@
         width: 30px;
       }
     }
-  
+    

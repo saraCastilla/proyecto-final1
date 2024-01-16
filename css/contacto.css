@@ -428,6 +428,371 @@
         fill: white;
       }
       /* ----------responsive-------- */
+      @media screen and (min-width:1381px) and (max-width:1919px) {
+        .contacto__main{
+            background-image: url(../img/fondoMovil.jpg);
+            background-size: cover;
+          } 
+        
+          .header__figure{
+            margin-left:25vw;
+            margin-top: 25vh;
+            width: 20em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .contacto__contenido{
+            padding-top: 20vh;
+          }
+          .contacto__h1{
+            font-size:3em ;
+          }
+          .h2__info{
+            font-size: 2em;
+          }
+          .parrafo__info{
+            font-size: 1.5em;
+            width: 80vw;
+          }
+          .enlace__info{
+            font-size: 4.7em;
+          }
+          .contacto__enlace{
+            font-size:1.7em ;
+          }
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+      }
+      @media screen and (min-width:1025px) and (max-width: 1380px)  {
+        .contacto__main{
+            background-image: url(../img/fondoMovil.jpg);
+            background-size: cover;
+          } 
+        
+          .header__figure{
+            margin-left:25vw;
+            margin-top: 25vh;
+            width: 20em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .contacto__contenido{
+            padding-top: 20vh;
+          }
+          .contacto__h1{
+            font-size:3.7em ;
+          }
+          .h2__info{
+            font-size: 2em;
+          }
+          .parrafo__info{
+            font-size: 1.5em;
+            width: 80vw;
+          }
+          .enlace__info{
+            font-size: 4em;
+          }
+          .contacto__enlace{
+            font-size:1.5em ;
+          }
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+      }
+      @media screen and (min-width: 907px) and (max-width: 1024px)  {
+        .contacto__main{
+            background-image: url(../img/fondoMovil.jpg);
+            background-size: cover;
+          } 
+        
+          .header__figure{
+            margin-left:25vw;
+            margin-top: 25vh;
+            width: 20em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .contacto__contenido{
+            padding-top: 20vh;
+          }
+          .contacto__h1{
+            font-size:3.7em ;
+          }
+          .h2__info{
+            font-size: 2em;
+          }
+          .parrafo__info{
+            font-size: 1.5em;
+            width: 80vw;
+          }
+          .enlace__info{
+            font-size: 4em;
+          }
+          .contacto__enlace{
+            font-size:1.5em ;
+          }
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+        
+      }
+      @media screen and (min-width: 769px) and (max-width: 906px)  {
+        .contacto__main{
+            background-image: url(../img/fondoMovil.jpg);
+            background-size: cover;
+          } 
+        
+          .header__figure{
+            margin-left:25vw;
+            margin-top: 25vh;
+            width: 20em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .contacto__contenido{
+            padding-top: 20vh;
+          }
+          .contacto__h1{
+            font-size:3em ;
+          }
+          .h2__info{
+            font-size: 2em;
+          }
+          .parrafo__info{
+            font-size: 1.5em;
+            width: 80vw;
+          }
+          .enlace__info{
+            font-size: 3.5em;
+          }
+          .contacto__enlace{
+            font-size:1.5em ;
+          }
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+
+      }
+      @media screen and (min-width:481px)  and (max-width:768px) {
+        .contacto__main{
+            background-image: url(../img/fondoMovil.jpg);
+            background-size: cover;
+          } 
+        
+          .header__figure{
+            margin-left:25vw;
+            margin-top: 25vh;
+            width: 20em;
+          }
+          .header__nav{
+            display: none;
+          }
+          .nav__ul{
+            display: none;
+          }
+          .hamburger{
+            display: block;
+          }
+          .contacto__contenido{
+            padding-top: 20vh;
+          }
+          .contacto__h1{
+            font-size:3em ;
+          }
+          .h2__info{
+            font-size: 2em;
+          }
+          .parrafo__info{
+            font-size: 1.5em;
+            width: 80vw;
+          }
+          .enlace__info{
+            font-size: 3em;
+          }
+          .contacto__enlace{
+            font-size:1.5em ;
+          }
+          .footer{
+              height: auto;
+              gap: 2vh;
+            }
+            .footer__div{
+              width: 60%;
+              margin-left: 5vw;
+              align-items: center;
+            }
+            .footer__figure{
+              width: 30vw;
+            }
+            .footer__h2{
+              color: white;
+              font-family: blair;
+              font-size: 1em;
+              line-height: 1.5em;
+              
+            }
+            .footer__social{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .social__ul{
+              width: 50vw;
+              display: flex;
+              justify-content: space-around;
+            }
+            .bi{
+              width: 30px;
+            }
+        }
+       
+
+      
       @media screen and (max-width: 480px) {
         .body{
             background-image: url(../img/fondoMovil.jpg);
@@ -437,9 +802,10 @@
         }
       
       
-        /* .contacto__main{
+        .contacto__main{
           background-image: url(../img/fondoMovil.jpg);
-        } */
+          background-size: cover;
+        } 
       
         .header__figure{
           margin-left:18vw;
